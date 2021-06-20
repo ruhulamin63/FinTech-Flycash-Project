@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
-class AgentProfileController extends Controller
+use Illuminate\Http\Request;
+
+class UserdetailsController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -19,8 +21,8 @@ class AgentProfileController extends Controller
      *
      * @return \Illuminate\View\View
      */
-    public function edit()
+    public function details()
     {
-        return view('agent.edit');
+        return view('userdetails.details');
     }
 }

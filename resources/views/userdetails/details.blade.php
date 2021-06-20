@@ -1,11 +1,11 @@
-@extends('layouts.app', ['page' => __('Tables'), 'pageSlug' => 'tables'])
+@extends('layouts.app', ['page' => __('User Details'), 'pageSlug' => 'userdetails'])
 
 @section('content')
 <div class="row">
   <div class="col-md-12">
     <div class="card ">
       <div class="card-header">
-        <h4 class="card-title"> Simple Table</h4>
+        <h4 class="card-title"> User Details Information</h4>
       </div>
       <div class="card-body">
         <div class="table-responsive">
@@ -38,7 +38,7 @@
                   Ruhul Amin
                 </td>
                 <td>
-                  raridoy101@gmai
+                  raridoy101@gmail.com
                 </td>
                 <td>
                   +880 1689-385783

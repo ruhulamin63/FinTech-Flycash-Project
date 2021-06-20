@@ -25,7 +25,7 @@
                 <div class="collapse show" id="laravel-examples">
                     <ul class="nav pl-4">
                         <li @if ($pageSlug == 'profile') class="active " @endif>
-                            <a href="{{ route('profile.edit')  }}">
+                            <a href="{{ route('userprofile.useredit')  }}">
                                 <i class="tim-icons icon-single-02"></i>
                                 <p>{{ __('User Profile') }}</p>
                             </a>
@@ -39,19 +39,19 @@
                         
                     <!-- I will insert $pageSlug -->
                          <li >
-                            <a href="#">
+                            <a href="{{ route('userdetails.details')  }}">
                                 <i class="tim-icons icon-single-02"></i>
                                 <p>{{ __('User Details') }}</p>
                             </a>
                         </li>
                         <li  @if ($pageSlug == 'profile') class="active " @endif>
-                            <a href="{{route('pages.agent.edit')}}">
+                            <a href="{{route('agent.edit')}}">
                                 <i class="tim-icons icon-single-02"></i>
-                                <p>{{ __('Agent Edit Profile') }}</p>
+                                <p>{{ __('Agent Profile') }}</p>
                             </a>
                         </li>
                         <li >
-                            <a href="#">
+                            <a href="{{route('agentdetails.index')}}">
                                 <i class="tim-icons icon-single-02"></i>
                                 <p>{{ __('Agent Details') }}</p>
                             </a>

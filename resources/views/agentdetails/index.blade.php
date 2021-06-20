@@ -1,11 +1,11 @@
-@extends('layouts.app', ['page' => __('Tables'), 'pageSlug' => 'tables'])
+@extends('layouts.app', ['page' => __('User Details'), 'pageSlug' => 'agentdetails'])
 
 @section('content')
 <div class="row">
   <div class="col-md-12">
     <div class="card ">
       <div class="card-header">
-        <h4 class="card-title"> Simple Table</h4>
+        <h4 class="card-title"> Agent Details Information</h4>
       </div>
       <div class="card-body">
         <div class="table-responsive">
@@ -35,22 +35,22 @@
             <tbody>
               <tr>
                 <td>
-                  Ruhul Amin
+                  Agent
                 </td>
                 <td>
-                  raridoy101@gmai
+                  abc@gmai.com
                 </td>
                 <td>
                   +880 1689-385783
                 </td>
                 <td class="text-center">
-                  1998535353
+                  35352342422
                 </td>
                 <td align="center">
-                  05-jul-1998
+                  10-jul-1970
                 </td>
                 <td align="center">
-                  User
+                  Agent
                 </td>
               </tr>
             </tbody>

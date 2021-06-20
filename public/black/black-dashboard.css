@@ -1218,8 +1218,8 @@ pre code {
     max-width: 25%;
   }
   .col-lg-4 {
-    flex: 0 0 60%;
-    max-width: 60%;
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
   }
   .col-lg-5 {
     flex: 0 0 41.666667%;
@@ -1477,7 +1477,6 @@ pre code {
     margin-left: 91.666667%;
   }
 }
-
 
 .table {
   width: 100%;
@@ -4776,7 +4775,7 @@ input[type="button"].btn-block {
 }
 
 .card-body {
-  flex: 0 0 auto;
+  flex: 1 1 auto;
   padding: 1.5rem;
 }
 
@@ -4792,7 +4791,6 @@ input[type="button"].btn-block {
 .card-text:last-child {
   margin-bottom: 0;
 }
-
 
 .card-link:hover {
   text-decoration: none;
@@ -14853,11 +14851,11 @@ table.tablesorter thead tr .headerSortDown {
 
 .sidebar,
 .off-canvas-sidebar {
-  background: #2dce89;
-  background: -webkit-linear-gradient(0deg, #2dce89 0%, #11cdef 100%);
-  background: -o-linear-gradient(0deg, #2dce89 0%, #11cdef 100%);
-  background: -moz-linear-gradient(0deg, #2dce89 0%, #11cdef 100%);
-  background: linear-gradient(0deg, #2dce89 0%, #11cdef 100%);
+  background: #11cdef;
+  background: -webkit-linear-gradient(0deg, #11cdef 0%, #2dce89 100%);
+  background: -o-linear-gradient(0deg, #11cdef 0%, #2dce89 100%);
+  background: -moz-linear-gradient(0deg, #11cdef 0%, #2dce89 100%);
+  background: linear-gradient(0deg, #11cdef 0%, #2dce89 100%);
   height: calc(100vh - 90px);
   width: 230px;
   position: fixed;
@@ -15321,7 +15319,7 @@ table.tablesorter thead tr .headerSortDown {
   float: right;
   width: 100%;
   min-height: 100vh;
-  border-top: 2px solid #11cdef;
+  border-top: 2px solid #2dce89;
   background: linear-gradient(#1e1e2f, #1e1e24);
   -webkit-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
   -moz-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
@@ -17269,7 +17267,7 @@ Copyright (c) 2015 Daniel Eden
 }
 
 .card .card-body {
-  padding: 25px;
+  padding: 15px;
 }
 
 .card .card-body.table-full-width {
@@ -17558,19 +17556,18 @@ Copyright (c) 2015 Daniel Eden
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-
 .card-chart .card-progress {
   margin-top: 30px;
   padding: 0 10px;
 }
 
 .card-chart .chart-area {
-  height: 500px;
+  height: 220px;
   width: 100%;
 }
 
 .card-chart .card-footer {
-  margin-top: 5px;
+  margin-top: 15px;
 }
 
 .card-chart .card-footer .stats {
@@ -17578,7 +17575,7 @@ Copyright (c) 2015 Daniel Eden
 }
 
 .card-chart .dropdown {
-  position: relative;
+  position: absolute;
   right: 20px;
   top: 20px;
 }
@@ -17629,16 +17626,13 @@ Copyright (c) 2015 Daniel Eden
 }
 
 .card-user .author .block.block-one {
-  background: rgb(45, 206,137, 0.6)
-  background: -webkit-linear-gradient(to right, rgb(45, 206,137, 0.6) 0%, rgba(17, 205, 239) 100%);
-  background: -o-linear-gradient(to right, rgb(45, 206,137, 0.6) 0%, rgba(17, 205, 239) 100%);
-  background: -moz-linear-gradient(to right, rgb(45, 206,137, 0.6) 0%, rgba(17, 205, 239) 100%);
-  background: linear-gradient(to right, rgb(45, 206,137, 0.6) 0%, rgba(17, 205, 239) 100%);
+  background: rgba(225, 78, 202, 0.6);
+  background: -webkit-linear-gradient(to right, rgba(225, 78, 202, 0.6) 0%, rgba(225, 78, 202, 0) 100%);
+  background: -o-linear-gradient(to right, rgba(225, 78, 202, 0.6) 0%, rgba(225, 78, 202, 0) 100%);
+  background: -moz-linear-gradient(to right, rgba(225, 78, 202, 0.6) 0%, rgba(225, 78, 202, 0) 100%);
+  background: linear-gradient(to right, rgba(225, 78, 202, 0.6) 0%, rgba(225, 78, 202, 0) 100%);
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=10);
   -webkit-transform: rotate(150deg);
-
-
-
   -moz-transform: rotate(150deg);
   -ms-transform: rotate(150deg);
   -o-transform: rotate(150deg);
@@ -17648,11 +17642,11 @@ Copyright (c) 2015 Daniel Eden
 }
 
 .card-user .author .block.block-two {
-  background: rgb(45, 206,137, 0.6)
-  background: -webkit-linear-gradient(to right, rgb(45, 206,137, 0.6) 0%, rgba(17, 205, 239) 100%);
-  background: -o-linear-gradient(to right, rgb(45, 206,137, 0.6) 0%, rgba(17, 205, 239) 100%);
-  background: -moz-linear-gradient(to right, rgb(45, 206,137, 0.6) 0%, rgba(17, 205, 239) 100%);
-  background: linear-gradient(to right, rgb(45, 206,137, 0.6) 0%, rgba(17, 205, 239) 100%);
+  background: rgba(225, 78, 202, 0.6);
+  background: -webkit-linear-gradient(to right, rgba(225, 78, 202, 0.6) 0%, rgba(225, 78, 202, 0) 100%);
+  background: -o-linear-gradient(to right, rgba(225, 78, 202, 0.6) 0%, rgba(225, 78, 202, 0) 100%);
+  background: -moz-linear-gradient(to right, rgba(225, 78, 202, 0.6) 0%, rgba(225, 78, 202, 0) 100%);
+  background: linear-gradient(to right, rgba(225, 78, 202, 0.6) 0%, rgba(225, 78, 202, 0) 100%);
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=10);
   -webkit-transform: rotate(30deg);
   -moz-transform: rotate(30deg);
@@ -17664,11 +17658,11 @@ Copyright (c) 2015 Daniel Eden
 }
 
 .card-user .author .block.block-three {
-  background: rgb(45, 206,137, 0.6)
-  background: -webkit-linear-gradient(to right, rgb(45, 206,137, 0.6) 0%, rgba(17, 205, 239) 100%);
-  background: -o-linear-gradient(to right, rgb(45, 206,137, 0.6) 0%, rgba(17, 205, 239) 100%);
-  background: -moz-linear-gradient(to right, rgb(45, 206,137, 0.6) 0%, rgba(17, 205, 239) 100%);
-  background: linear-gradient(to right, rgb(45, 206,137, 0.6) 0%, rgba(17, 205, 239) 100%);
+  background: rgba(225, 78, 202, 0.6);
+  background: -webkit-linear-gradient(to right, rgba(225, 78, 202, 0.6) 0%, rgba(225, 78, 202, 0) 100%);
+  background: -o-linear-gradient(to right, rgba(225, 78, 202, 0.6) 0%, rgba(225, 78, 202, 0) 100%);
+  background: -moz-linear-gradient(to right, rgba(225, 78, 202, 0.6) 0%, rgba(225, 78, 202, 0) 100%);
+  background: linear-gradient(to right, rgba(225, 78, 202, 0.6) 0%, rgba(225, 78, 202, 0) 100%);
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=10);
   -webkit-transform: rotate(170deg);
   -moz-transform: rotate(170deg);
@@ -17680,11 +17674,11 @@ Copyright (c) 2015 Daniel Eden
 }
 
 .card-user .author .block.block-four {
-  background: rgb(45, 206,137, 0.6)
-  background: -webkit-linear-gradient(to right, rgb(45, 206,137, 0.6) 0%, rgba(17, 205, 239) 100%);
-  background: -o-linear-gradient(to right, rgb(45, 206,137, 0.6) 0%, rgba(17, 205, 239) 100%);
-  background: -moz-linear-gradient(to right, rgb(45, 206,137, 0.6) 0%, rgba(17, 205, 239) 100%);
-  background: linear-gradient(to right, rgb(45, 206,137, 0.6) 0%, rgba(17, 205, 239) 100%);
+  background: rgba(225, 78, 202, 0.6);
+  background: -webkit-linear-gradient(to right, rgba(225, 78, 202, 0.6) 0%, rgba(225, 78, 202, 0) 100%);
+  background: -o-linear-gradient(to right, rgba(225, 78, 202, 0.6) 0%, rgba(225, 78, 202, 0) 100%);
+  background: -moz-linear-gradient(to right, rgba(225, 78, 202, 0.6) 0%, rgba(225, 78, 202, 0) 100%);
+  background: linear-gradient(to right, rgba(225, 78, 202, 0.6) 0%, rgba(225, 78, 202, 0) 100%);
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=10);
   -webkit-transform: rotate(150deg);
   -moz-transform: rotate(150deg);
@@ -17790,7 +17784,7 @@ Copyright (c) 2015 Daniel Eden
 }
 
 .login-page .card-login.card-white .card-header .card-title {
-  color: #2dce89;
+  color: #ffffff;
 }
 
 .login-page .card-login .card-header .card-title {
@@ -17809,7 +17803,7 @@ Copyright (c) 2015 Daniel Eden
 }
 
 .login-page .card-login .card-header img {
-  position: relative;
+  position: absolute;
 }
 
 .login-page .card-login .input-group:last-child {
@@ -17838,7 +17832,7 @@ Copyright (c) 2015 Daniel Eden
 }
 
 .card-register.card-white .card-header .card-title {
-  color: #2dce89;
+  color: #ffffff;
 }
 
 .card-register .card-header .card-title {

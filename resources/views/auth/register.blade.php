@@ -14,17 +14,7 @@
                     </p>
                 </div>
             </div>
-            <div class="info-area info-horizontal">
-                <div class="icon icon-primary">
-                    <i class="tim-icons icon-triangle-right-17"></i>
-                </div>
-                <div class="description">
-                    <h3 class="info-title">{{ __('Fully Coded in HTML5') }}</h3>
-                    <p class="description">
-                        {{ __('We\'ve developed the website with HTML5 and CSS3. The client has access to the code using GitHub.') }}
-                    </p>
-                </div>
-            </div>
+    
             <div class="info-area info-horizontal">
                 <div class="icon icon-info">
                     <i class="tim-icons icon-trophy"></i>
@@ -40,8 +30,8 @@
         <div class="col-md-7 mr-auto">
             <div class="card card-register card-white">
                 <div class="card-header">
-                    <img class="card-img" src="{{ asset('black') }}/img/card-primary.png" alt="Card image">
-                    <h4 class="card-title">{{ __('Register') }}</h4>
+                <img src="{{ asset('black') }}/img/flycash.png" alt="">
+                    <h4 align= "center" class="card-title">{{ __('Registration') }}</h4>
                 </div>
                 <form class="form" method="post" action="{{ route('register') }}">
                     @csrf
@@ -82,17 +72,52 @@
                             </div>
                             <input type="password" name="password_confirmation" class="form-control" placeholder="{{ __('Confirm Password') }}">
                         </div>
-                        <div class="form-check text-left">
-                            <label class="form-check-label">
-                                <input class="form-check-input" type="checkbox">
-                                <span class="form-check-sign"></span>
-                                {{ __('I agree to the') }}
-                                <a href="#">{{ __('terms and conditions') }}</a>.
-                            </label>
+                        <div class="input-group{{ $errors->has('phone') ? ' has-danger' : '' }}">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                    <i class="tim-icons icon-lock-circle"></i>
+                                </div>
+                            </div>
+                            <input type="digit" name="phone" class="form-control{{ $errors->has('phone') ? ' is-invalid' : '' }}" placeholder="{{ __('Phone Number') }}">
+                            @include('alerts.feedback', ['field' => 'phone'])
+                        </div>
+                        <div class="input-group{{ $errors->has('phone') ? ' has-danger' : '' }}">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                    <i class="tim-icons icon-lock-circle"></i>
+                                </div>
+                            </div>
+                            <input type="text" name="nid" class="form-control{{ $errors->has('nid') ? ' is-invalid' : '' }}" placeholder="{{ __('NID Number') }}">
+                            @include('alerts.feedback', ['field' => 'nid'])
+                        </div>
+                        
+                        <div class="input-group{{ $errors->has('phone') ? ' has-danger' : '' }}">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                    <i class="tim-icons icon-lock-circle"></i>
+                                </div>
+                            </div>
+                            <input type="date" name="dob" class="form-control{{ $errors->has('dob') ? ' is-invalid' : '' }}" placeholder="{{ __('Phone Number') }}">
+                            @include('alerts.feedback', ['field' => 'dob'])
+                        </div>
+                        <div class="input-group{{ $errors->has('phone') ? ' has-danger' : '' }}">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                    <i class="tim-icons icon-lock-circle"></i>
+                                </div>
+                            </div>
+                            <select  type="text" name="type" class="form-control{{ $errors->has('type') ? ' is-invalid' : '' }}" placeholder="{{ __('Account Type') }}">
+
+                            <option value="{{ 'Account Type' }}" name= "admin" placeholder="{{ __('Account Type') }}">Admin</option>
+                            <option value="Admin" name= "admin" placeholder="{{ __('Account Type') }}">User</option>
+                            <option value="{{ 'Account Type' }}" name= "admin" placeholder="{{ __('Account Type') }}">Agent</option>
+                            <option value="Admin" name= "admin" placeholder="{{ __('Account Type') }}">Communication Officer</option>
+                            </select>
+                            @include('alerts.feedback', ['field' => 'type'])
                         </div>
                     </div>
                     <div class="card-footer">
-                        <button type="submit" class="btn btn-primary btn-round btn-lg">{{ __('Get Started') }}</button>
+                        <button type="submit" class="btn btn-primary btn-round btn-lg">{{ __('Sign Up') }}</button>
                     </div>
                 </form>
             </div>

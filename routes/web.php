@@ -26,7 +26,14 @@ Route::get('/home', 'App\Http\Controllers\HomeController@index')->name('home')->
 
 Route::group(['middleware' => 'auth'], function () {
 
-	Route::get('edit', ['as' => 'pages.agent.edit', 'uses' => 'App\Http\Controllers\AgentProfileController@edit']);
+		Route::get('agent', ['as' => 'agent.edit', 'uses' => 'App\Http\Controllers\AgentProfileController@edit']);
+		Route::get('userprofile', ['as' => 'userprofile.useredit', 'uses' => 'App\Http\Controllers\UserProfileController@useredit']);
+		Route::get('userdetails', ['as' => 'userdetails.details', 'uses' => 'App\Http\Controllers\UserdetailsController@details']);
+		Route::get('agentdetails', ['as' => 'agentdetails.index', 'uses' => 'App\Http\Controllers\AgentdetailsController@index']);
+
+
+//==============================================================================================================	
+
 		Route::get('icons', ['as' => 'pages.icons', 'uses' => 'App\Http\Controllers\PageController@icons']);
 		Route::get('maps', ['as' => 'pages.maps', 'uses' => 'App\Http\Controllers\PageController@maps']);
 		Route::get('notifications', ['as' => 'pages.notifications', 'uses' => 'App\Http\Controllers\PageController@notifications']);
