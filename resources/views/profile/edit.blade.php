@@ -5,7 +5,7 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">
-                    <h4 class="title">{{ __('My Profile') }}</h4>
+                    <h4 class="title">{{ __('Communication Officer Profile') }}</h4>
                 </div>
                 <form method="post" action="{{ route('profile.update') }}" autocomplete="off">
                     <div class="card-body">
@@ -16,7 +16,7 @@
 
                             <div class="form-group{{ $errors->has('name') ? ' has-danger' : '' }}">
                                 <label>{{ __('Name') }}</label>
-                                <input type="text" name="name" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" placeholder="{{ __('Name') }}" value="{{ __('Communication Officer') }}">
+                                <input type="text" name="name" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" placeholder="{{ __('Name') }}" value="{{ __('Roky') }}">
                                 @include('alerts.feedback', ['field' => 'name'])
                             </div>
 
@@ -28,13 +28,13 @@
 
                             <div class="form-group">
                                 <label>{{ __('Phone Number') }}</label>
-                                <input type="text" name="phone" class="form-control" placeholder="{{ __('Phone number') }}" value="{{ __('+880') }}">
+                                <input type="text" name="phone" class="form-control" placeholder="{{ __('Phone number') }}" value="{{ __('+880****') }}">
                                 @include('alerts.feedback', ['field' => 'phone'])
                             </div>
 
                             <div class="form-group">
                                 <label>{{ __('NID') }}</label>
-                                <input type="text" name="nid" class="form-control" placeholder="{{ __('NID Number') }}" value="{{ __('1998.....') }}">
+                                <input type="text" name="nid" class="form-control" placeholder="{{ __('NID Number') }}" value="{{ __('1998******') }}">
                                 @include('alerts.feedback', ['field' => 'nid'])
                             </div>
 
@@ -100,11 +100,11 @@
                             <div class="block block-three"></div>
                             <div class="block block-four"></div>
                             <a href="#">
-                                <img class="avatar" src="{{ asset('black') }}/img/anime3.png" alt="">
-                                <h5 class="title">{{ auth()->user()->name }}</h5>
+                                <img class="avatar" src="{{ asset('black') }}/img/anime6.png" alt="">
+                                <h5 class="title">{{ __('Communication Officer') }}</h5>
                             </a>
                             <p class="description">
-                                {{ __('User Profile') }}
+                                {{ __('Profile') }}
                             </p>
                         </div>
                     </p>

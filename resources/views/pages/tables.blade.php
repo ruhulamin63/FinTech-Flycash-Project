@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="row">
-  <div class="col-md-12">
+  <!-- <div class="col-md-12">
     <div class="card ">
       <div class="card-header">
         <h4 class="card-title"> Simple Table</h4>
@@ -58,12 +58,11 @@
         </div>
       </div>
     </div>
-  </div>
-  <!-- <div class="col-md-12">
+  </div> -->
+  <div class="col-md-12">
     <div class="card  card-plain">
       <div class="card-header">
         <h4 class="card-title"> Table on Plain Background</h4>
-        <p class="category"> Here is a subtitle for this table</p>
       </div>
       <div class="card-body">
         <div class="table-responsive">
@@ -188,6 +187,6 @@
         </div>
       </div>
     </div>
-  </div> -->
+  </div>
 </div>
 @endsection

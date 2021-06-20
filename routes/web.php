@@ -31,8 +31,12 @@ Route::group(['middleware' => 'auth'], function () {
 		Route::get('userdetails', ['as' => 'userdetails.details', 'uses' => 'App\Http\Controllers\UserdetailsController@details']);
 		Route::get('agentdetails', ['as' => 'agentdetails.index', 'uses' => 'App\Http\Controllers\AgentdetailsController@index']);
 
+//***************************************************************************************************************************
 
-//==============================================================================================================	
+		Route::get('transection', ['as' => 'transection.tran', 'uses' => 'App\Http\Controllers\TranController@tran']);
+
+
+//=========================================================================================================================	
 
 		Route::get('icons', ['as' => 'pages.icons', 'uses' => 'App\Http\Controllers\PageController@icons']);
 		Route::get('maps', ['as' => 'pages.maps', 'uses' => 'App\Http\Controllers\PageController@maps']);
@@ -46,7 +50,7 @@ Route::group(['middleware' => 'auth'], function () {
 Route::group(['middleware' => 'auth'], function () {
 	Route::resource('user', 'App\Http\Controllers\UserController', ['except' => ['show']]);
 	Route::get('profile', ['as' => 'profile.edit', 'uses' => 'App\Http\Controllers\ProfileController@edit']);
-	Route::put('profile', ['as' => 'profile.update', 'uses' => 'App\Http\Controllers\ProfileController@update']);
-	Route::put('profile/password', ['as' => 'profile.password', 'uses' => 'App\Http\Controllers\ProfileController@password']);
+	Route::post('profile', ['as' => 'profile.update', 'uses' => 'App\Http\Controllers\ProfileController@update']);
+	Route::post('profile/password', ['as' => 'profile.password', 'uses' => 'App\Http\Controllers\ProfileController@password']);
 });
 

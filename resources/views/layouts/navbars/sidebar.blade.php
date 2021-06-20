@@ -72,7 +72,7 @@
                 </div>
             </li>
             <li >
-                <a href="#">
+                <a href="{{ route('profile.edit') }}">
                     <i class="tim-icons icon-settings"></i>
                     <p>{{ __('Setting') }}</p>
                 </a>
@@ -81,6 +81,12 @@
                 <a href="#">
                     <i class="tim-icons icon-trash-simple"></i>
                     <p>{{ __('Block List') }}</p>
+                </a>
+            </li>
+            <li @if ($pageSlug == 'transection') class="active " @endif>
+                <a href="{{ route('transection.tran') }}">
+                    <i class="tim-icons icon-link-72"></i>
+                    <p>{{ __('Transection') }}</p>
                 </a>
             </li>
             <li @if ($pageSlug == 'icons') class="active " @endif>
@@ -99,12 +105,6 @@
                 <a href="{{ route('pages.tables') }}">
                     <i class="tim-icons icon-puzzle-10"></i>
                     <p>{{ __('Table List') }}</p>
-                </a>
-            </li>
-            <li @if ($pageSlug == 'typography') class="active " @endif>
-                <a href="{{ route('pages.typography') }}">
-                    <i class="tim-icons icon-align-center"></i>
-                    <p>{{ __('Typography') }}</p>
                 </a>
             </li>
             <li @if ($pageSlug == 'rtl') class="active " @endif>

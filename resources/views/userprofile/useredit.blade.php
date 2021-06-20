@@ -16,7 +16,7 @@
 
                             <div class="form-group{{ $errors->has('name') ? ' has-danger' : '' }}">
                                 <label>{{ __('Name') }}</label>
-                                <input type="text" name="name" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" placeholder="{{ __('Name') }}" value="{{ __('User') }}">
+                                <input type="text" name="name" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" placeholder="{{ __('Name') }}" value="{{ __('Korim') }}">
                                 @include('alerts.feedback', ['field' => 'name'])
                             </div>
 
@@ -28,13 +28,13 @@
 
                             <div class="form-group">
                                 <label>{{ __('Phone Number') }}</label>
-                                <input type="text" name="phone" class="form-control" placeholder="{{ __('Phone number') }}" value="{{ __('+880') }}">
+                                <input type="text" name="phone" class="form-control" placeholder="{{ __('Phone number') }}" value="{{ __('+880*****') }}">
                                 @include('alerts.feedback', ['field' => 'phone'])
                             </div>
 
                             <div class="form-group">
                                 <label>{{ __('NID') }}</label>
-                                <input type="text" name="nid" class="form-control" placeholder="{{ __('NID Number') }}" value="{{ __('1998.....') }}">
+                                <input type="text" name="nid" class="form-control" placeholder="{{ __('NID Number') }}" value="{{ __('1998*****') }}">
                                 @include('alerts.feedback', ['field' => 'nid'])
                             </div>
 
