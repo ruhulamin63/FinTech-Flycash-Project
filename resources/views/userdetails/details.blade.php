@@ -27,9 +27,6 @@
                 <th class="text-center">
                   DOB
                 </th>
-                <th class="text-center">
-                  Type
-                </th>
               </tr>
             </thead>
             <tbody>
@@ -48,9 +45,6 @@
                 </td>
                 <td align="center">
                   05-jul-1998
-                </td>
-                <td align="center">
-                  User
                 </td>
               </tr>
             </tbody>

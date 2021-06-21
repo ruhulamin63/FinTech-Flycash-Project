@@ -56,18 +56,6 @@
                                 <p>{{ __('Agent Details') }}</p>
                             </a>
                         </li>
-                        <li>
-                            <a href="#">
-                                <i class="tim-icons icon-single-02"></i>
-                                <p>{{ __('User Balance') }}</p>
-                            </a>
-                        </li>
-                        <li >
-                            <a href="#">
-                                <i class="tim-icons icon-single-02"></i>
-                                <p>{{ __('Agent Balance') }}</p>
-                            </a>
-                        </li>
                     </ul>
                 </div>
             </li>
@@ -75,6 +63,12 @@
                 <a href="{{ route('profile.edit') }}">
                     <i class="tim-icons icon-settings"></i>
                     <p>{{ __('Setting') }}</p>
+                </a>
+            </li>
+            <li>
+                <a href="{{route('information.index')}}">
+                    <i class="tim-icons icon-single-02"></i>
+                    <p>{{ __('Information') }}</p>
                 </a>
             </li>
             <li >

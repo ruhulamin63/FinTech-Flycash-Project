@@ -18,6 +18,9 @@
                 <th>
                   Agent Number
                 </th>
+                <th>
+                 Type
+                </th>
                 <th >
                   Amount
                 </th>
@@ -32,6 +35,9 @@
                 </td>
                 <td>
                   017******
+                </td>
+                <td>
+                 Cash Out
                 </td>
                 <td>
                   5000

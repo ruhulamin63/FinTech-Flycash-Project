@@ -34,6 +34,7 @@ Route::group(['middleware' => 'auth'], function () {
 //***************************************************************************************************************************
 
 		Route::get('transection', ['as' => 'transection.tran', 'uses' => 'App\Http\Controllers\TranController@tran']);
+		Route::get('information', ['as' => 'information.index', 'uses' => 'App\Http\Controllers\AllInfoDataController@index']);
 
 
 //=========================================================================================================================	

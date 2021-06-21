@@ -27,18 +27,15 @@
                 <th class="text-center">
                   DOB
                 </th>
-                <th class="text-center">
-                  Type
-                </th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>
-                  Agent
+                  Rohim
                 </td>
                 <td>
-                  abc@gmai.com
+                  abc@gmail.com
                 </td>
                 <td>
                   +880 1689-385783
@@ -48,9 +45,6 @@
                 </td>
                 <td align="center">
                   10-jul-1970
-                </td>
-                <td align="center">
-                  Agent
                 </td>
               </tr>
             </tbody>

@@ -68,7 +68,7 @@
                             <div class="block block-four"></div>
                             <a href="#">
                                 <img class="avatar" src="{{ asset('black') }}/img/anime3.png" alt="">
-                                <h5 class="title">{{ __('Hasan') }}</h5>
+                                <h5 class="title">{{ __('Korim') }}</h5>
                             </a>
                             <p class="description">
                                 {{ __('User Profile') }}
