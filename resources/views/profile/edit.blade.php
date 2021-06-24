@@ -60,10 +60,10 @@
                 <div class="card-header">
                     <h5 class="title">{{ __('Password') }}</h5>
                 </div>
-                <form method="post" action="{{ route('profile.password') }}" autocomplete="off">
+                <form method="post" action="#" autocomplete="off">
                     <div class="card-body">
                         @csrf
-                        @method('put')
+                        @method('post')
 
                         @include('alerts.success', ['key' => 'password_status'])
 

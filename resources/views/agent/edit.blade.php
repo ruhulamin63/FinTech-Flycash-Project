@@ -7,10 +7,10 @@
                 <div class="card-header">
                     <h4 class="title">{{ __('Agent Profile') }}</h4>
                 </div>
-                <form method="post" action="{{ route('profile.update') }}" autocomplete="off">
+                <form method="post" action="#" autocomplete="off">
                     <div class="card-body">
                             @csrf
-                            @method('put')
+                            @method('post')
 
                             @include('alerts.success')
 
