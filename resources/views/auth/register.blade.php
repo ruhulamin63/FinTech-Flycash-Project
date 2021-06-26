@@ -64,15 +64,15 @@
                             <input type="password" name="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" placeholder="{{ __('Password') }}">
                             @include('alerts.feedback', ['field' => 'password'])
                         </div>
-                        <div class="input-group">
+                        <!-- <div class="input-group">
                             <div class="input-group-prepend">
                                 <div class="input-group-text">
                                     <i class="tim-icons icon-lock-circle"></i>
                                 </div>
                             </div>
                             <input type="password" name="password_confirmation" class="form-control" placeholder="{{ __('Confirm Password') }}">
-                        </div>
-                        <div class="input-group{{ $errors->has('phone') ? ' has-danger' : '' }}">
+                        </div> -->
+                        <!-- <div class="input-group{{ $errors->has('phone') ? ' has-danger' : '' }}">
                             <div class="input-group-prepend">
                                 <div class="input-group-text">
                                     <i class="tim-icons icon-lock-circle"></i>
@@ -114,7 +114,7 @@
                             <option value="Admin" name= "admin" placeholder="{{ __('Account Type') }}">Communication Officer</option>
                             </select>
                             @include('alerts.feedback', ['field' => 'type'])
-                        </div>
+                        </div> -->
                     </div>
                     <div class="card-footer">
                         <button type="submit" class="btn btn-primary btn-round btn-lg">{{ __('Sign Up') }}</button>

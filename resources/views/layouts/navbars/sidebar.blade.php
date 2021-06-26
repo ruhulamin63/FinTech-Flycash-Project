@@ -24,10 +24,10 @@
 
                 <div class="collapse show" id="laravel-examples">
                     <ul class="nav pl-4">
-                        <li @if ($pageSlug == 'profile') class="active " @endif>
-                            <a href="{{ route('userprofile.useredit')  }}">
+                        <li>
+                            <a href="{{ route('eachuser.index')  }}">
                                 <i class="tim-icons icon-single-02"></i>
-                                <p>{{ __('User Profile') }}</p>
+                                <p>{{ __('Each User Details') }}</p>
                             </a>
                         </li>
                         <li @if ($pageSlug == 'users') class="active " @endif>

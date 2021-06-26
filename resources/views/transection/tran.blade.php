@@ -12,38 +12,30 @@
           <table class="table tablesorter " id="">
             <thead class=" text-primary">
               <tr>
-                <th>
-                  Account Number
-                </th>
-                <th>
-                  Agent Number
-                </th>
-                <th>
-                 Type
-                </th>
-                <th >
-                  Amount
-                </th>
-                <th class="text-center">
-                  Date
-                </th>
+                <th>Account Number</th>
+                <th>Agent Number</th>
+                <th>Type</th>
+                <th>Amount</th>
+                <th class="text-center">Date</th>
+                <th>Action</th>
+              </tr>
             </thead>
             <tbody>
               <tr>
+                <td>980*****</td>
+                <td>017******</td>
+                <td>Cash Out</td>
+                <td>5000</td>
+                <td class="text-center">5-Jun-2021, 12:30 pm</td>
                 <td>
-                  980*****
-                </td>
-                <td>
-                  017******
-                </td>
-                <td>
-                 Cash Out
-                </td>
-                <td>
-                  5000
-                </td>
-                <td class="text-center">
-                  5-Jun-2021, 12:30 pm
+                  <a href="{{ route('eachuser.index')  }}">
+                    <i class="tim-icons icon-single-02"></i>
+                      Edit
+                  </a> | 
+                  <a href="{{ route('#')  }}">
+                    <i class="tim-icons icon-single-02"></i>
+                    delete
+                  </a>
                 </td>
               </tr>
             </tbody>

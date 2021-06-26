@@ -27,7 +27,7 @@ Route::get('/home', 'App\Http\Controllers\HomeController@index')->name('home')->
 Route::group(['middleware' => 'auth'], function () {
 
 		Route::get('agent', ['as' => 'agent.edit', 'uses' => 'App\Http\Controllers\AgentProfileController@edit']);
-		Route::get('userprofile', ['as' => 'userprofile.useredit', 'uses' => 'App\Http\Controllers\UserProfileController@useredit']);
+		Route::get('eachuser', ['as' => 'eachuser.index', 'uses' => 'App\Http\Controllers\EachUserProfileController@index']);
 		Route::get('userdetails', ['as' => 'userdetails.details', 'uses' => 'App\Http\Controllers\UserdetailsController@details']);
 		Route::get('agentdetails', ['as' => 'agentdetails.index', 'uses' => 'App\Http\Controllers\AgentdetailsController@index']);
 

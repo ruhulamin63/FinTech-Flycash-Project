@@ -13,11 +13,10 @@
                             @method('post')
 
                             @include('alerts.success')
-
-                            <div class="form-group{{ $errors->has('name') ? ' has-danger' : '' }}">
+                            
+                            <div class="form-group">
                                 <label>{{ __('Name') }}</label>
-                                <input type="text" name="name" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" placeholder="{{ __('Name') }}" value="{{ __('Korim') }}">
-                                @include('alerts.feedback', ['field' => 'name'])
+                            
                             </div>
 
                             <div class="form-group{{ $errors->has('email') ? ' has-danger' : '' }}">
