@@ -12,40 +12,20 @@
           <table class="table tablesorter " id="">
             <thead class=" text-primary">
               <tr>
-                <th>
-                  Name
-                </th>
-                <th>
-                  Email
-                </th>
-                <th >
-                  Phone
-                </th>
-                <th class="text-center">
-                  NID
-                </th>
-                <th class="text-center">
-                  DOB
-                </th>
+                <th>Name</th>
+                <th>Email</th>
+                <th >Phone</th>
+                <th class="text-center">NID</th>
+                <th class="text-center">DOB</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>
-                  Ruhul Amin
-                </td>
-                <td>
-                  raridoy101@gmail.com
-                </td>
-                <td>
-                  +880 1689-385783
-                </td>
-                <td class="text-center">
-                  1998535353
-                </td>
-                <td align="center">
-                  05-jul-1998
-                </td>
+                <td>Ruhul Amin</td>
+                <td>raridoy101@gmail.com</td>
+                <td>+880 1689-385783</td>
+                <td class="text-center">1998535353</td>
+                <td align="center">05-jul-1998</td>
               </tr>
             </tbody>
           </table>

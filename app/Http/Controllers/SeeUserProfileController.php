@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class UserdetailsController extends Controller
+class SeeUserProfileController extends Controller
 {
-    /**
+   /**
      * Create a new controller instance.
      *
      * @return void
@@ -21,8 +21,8 @@ class UserdetailsController extends Controller
      *
      * @return \Illuminate\View\View
      */
-    public function details()
+    public function seeinfo()
     {
-        return view('users.details');
+        return view('users.seeinfo');
     }
 }

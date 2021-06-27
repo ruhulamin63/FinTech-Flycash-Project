@@ -19,38 +19,32 @@ Route::get('/', function () {
 
 
 Auth::routes();
-Route::get('/home','LoginController@index')->name('home');
-Route::post('/home','LoginController@verify')->name('home');
+Route::get('/home',[App\Http\Controllers\HomeController::class, 'index']);
 Auth::routes();
-
-Route::group(['middleware'=>'sess'], function(){
-	Route::get('/home', 'HomeController@index')->name('home')->middleware('auth');
-});
-
-
+Route::get('/home','App\Http\Controllers\HomeController@index')->name('home')->middleware('auth');
 
 Route::group(['middleware' => 'auth'], function () {
 
-		Route::get('agent', ['as' => 'agent.edit', 'uses' => 'App\Http\Controllers\AgentProfileController@edit']);
-		Route::get('eachuser', ['as' => 'eachuser.index', 'uses' => 'App\Http\Controllers\EachUserProfileController@index']);
-		Route::get('userdetails', ['as' => 'userdetails.details', 'uses' => 'App\Http\Controllers\UserdetailsController@details']);
-		Route::get('agentdetails', ['as' => 'agentdetails.index', 'uses' => 'App\Http\Controllers\AgentdetailsController@index']);
+	Route::get('agent', ['as' => 'agent.edit', 'uses' => 'App\Http\Controllers\AgentProfileController@edit']);
+	Route::get('users', ['as' => 'users.seeinfo', 'uses' => 'App\Http\Controllers\SeeUserProfileController@seeinfo']);
+	Route::get('users', ['as' => 'users.details', 'uses' => 'App\Http\Controllers\UserdetailsController@details']);
+	Route::get('agentdetails', ['as' => 'agentdetails.index', 'uses' => 'App\Http\Controllers\AgentdetailsController@index']);
 
 //***************************************************************************************************************************
 
-		Route::get('transection', ['as' => 'transection.tran', 'uses' => 'App\Http\Controllers\TranController@tran']);
-		Route::get('information', ['as' => 'information.index', 'uses' => 'App\Http\Controllers\AllInfoDataController@index']);
+	Route::get('transection', ['as' => 'transection.tran', 'uses' => 'App\Http\Controllers\TranController@tran']);
+	Route::get('information', ['as' => 'information.index', 'uses' => 'App\Http\Controllers\AllInfoDataController@index']);
 
 
 //=========================================================================================================================	
 
-		Route::get('icons', ['as' => 'pages.icons', 'uses' => 'App\Http\Controllers\PageController@icons']);
-		Route::get('maps', ['as' => 'pages.maps', 'uses' => 'App\Http\Controllers\PageController@maps']);
-		Route::get('notifications', ['as' => 'pages.notifications', 'uses' => 'App\Http\Controllers\PageController@notifications']);
-		Route::get('rtl', ['as' => 'pages.rtl', 'uses' => 'App\Http\Controllers\PageController@rtl']);
-		Route::get('tables', ['as' => 'pages.tables', 'uses' => 'App\Http\Controllers\PageController@tables']);
-	 	Route::get('typography', ['as' => 'pages.typography', 'uses' => 'App\Http\Controllers\PageController@typography']);
-		Route::get('upgrade', ['as' => 'pages.upgrade', 'uses' => 'App\Http\Controllers\PageController@upgrade']);
+	Route::get('icons', ['as' => 'pages.icons', 'uses' => 'App\Http\Controllers\PageController@icons']);
+	Route::get('maps', ['as' => 'pages.maps', 'uses' => 'App\Http\Controllers\PageController@maps']);
+	Route::get('notifications', ['as' => 'pages.notifications', 'uses' => 'App\Http\Controllers\PageController@notifications']);
+	Route::get('rtl', ['as' => 'pages.rtl', 'uses' => 'App\Http\Controllers\PageController@rtl']);
+	Route::get('tables', ['as' => 'pages.tables', 'uses' => 'App\Http\Controllers\PageController@tables']);
+	Route::get('typography', ['as' => 'pages.typography', 'uses' => 'App\Http\Controllers\PageController@typography']);
+	Route::get('upgrade', ['as' => 'pages.upgrade', 'uses' => 'App\Http\Controllers\PageController@upgrade']);
 });
 
 Route::group(['middleware' => 'auth'], function () {

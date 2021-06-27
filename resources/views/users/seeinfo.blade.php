@@ -1,4 +1,4 @@
-@extends('layouts.app', ['page' => __('User Profile'), 'pageSlug' => 'profile'])
+@extends('layouts.app', ['page' => __('User Profile'), 'pageSlug' => 'userprofile'])
 
 @section('content')
     <div class="row">
@@ -10,7 +10,7 @@
                 <form method="post" action="#" autocomplete="off">
                     <div class="card-body">
                             @csrf
-                            @method('post')
+                            @method('put')
 
                             @include('alerts.success')
                             

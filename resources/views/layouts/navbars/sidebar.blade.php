@@ -24,33 +24,36 @@
 
                 <div class="collapse show" id="laravel-examples">
                     <ul class="nav pl-4">
-                        <li>
-                            <a href="{{ route('eachuser.index')  }}">
+                        <li @if($pageSlug == 'userprofile') class="active " @endif>
+                            <a href="#">
+                                <i class="tim-icons icon-bullet-list-67"></i>
+                                <p>{{ __('See User') }}</p>
+                            </a>
+                        </li><li @if($pageSlug == 'userprofile') class="active " @endif>
+                            <a href="#">
                                 <i class="tim-icons icon-single-02"></i>
-                                <p>{{ __('Each User Details') }}</p>
+                                <p>{{ __('See User') }}</p>
                             </a>
                         </li>
-                        <li @if ($pageSlug == 'users') class="active " @endif>
+                        <li @if($pageSlug == 'users') class="active " @endif>
                             <a href="{{ route('user.index')  }}">
                                 <i class="tim-icons icon-bullet-list-67"></i>
                                 <p>{{ __('User Management') }}</p>
                             </a>
                         </li>
-                        
-                    <!-- I will insert $pageSlug -->
-                         <li >
-                            <a href="{{ route('userdetails.details')  }}">
+                         <li @if($pageSlug == 'userdetails') class="active " @endif>
+                            <a href="{{ route('users.details')  }}">
                                 <i class="tim-icons icon-single-02"></i>
                                 <p>{{ __('User Details') }}</p>
                             </a>
                         </li>
-                        <li  @if ($pageSlug == 'profile') class="active " @endif>
+                        <li  @if($pageSlug == 'profile') class="active " @endif>
                             <a href="{{route('agent.edit')}}">
                                 <i class="tim-icons icon-single-02"></i>
                                 <p>{{ __('Agent Profile') }}</p>
                             </a>
                         </li>
-                        <li >
+                        <li @if($pageSlug == 'agentdetails') class="active " @endif>
                             <a href="{{route('agentdetails.index')}}">
                                 <i class="tim-icons icon-single-02"></i>
                                 <p>{{ __('Agent Details') }}</p>

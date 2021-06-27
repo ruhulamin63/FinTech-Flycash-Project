@@ -2,29 +2,39 @@
 
 namespace App\Http\Controllers\Auth;
 
-use Illuminate\Http\Request;
-use Validator;
-use App\Http\Requests\UserRequest;
-use App\Models\Communication;
+use App\Http\Controllers\Controller;
+use App\Providers\RouteServiceProvider;
+use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 class LoginController extends Controller
 {
-    public function index(){
-        return view('login.index');
-    }
+    /*
+    |--------------------------------------------------------------------------
+    | Login Controller
+    |--------------------------------------------------------------------------
+    |
+    | This controller handles authenticating users for the application and
+    | redirecting them to your home screen. The controller uses a trait
+    | to conveniently provide its functionality to your applications.
+    |
+    */
 
-    public function verify(UserRequest $req){
-        //dd($req); //this line for debug for this code
-        
-        $user = Communication::where('email',$req->email)
-            ->where('password',$req->password)
-            ->first();
-            
-        if($user){
-            $req->session()->put('email',$req->email);
-            return redirect('/home');
-        }else{
-            return redirect('/login');
-        } 
+    use AuthenticatesUsers;
+
+    /**
+     * Where to redirect users after login.
+     *
+     * @var string
+     */
+    protected $redirectTo = RouteServiceProvider::HOME;
+
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('guest')->except('logout');
     }
 }
