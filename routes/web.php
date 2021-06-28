@@ -17,7 +17,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
 Auth::routes();
 Route::get('/home',[App\Http\Controllers\HomeController::class, 'index']);
 Auth::routes();
@@ -52,6 +51,7 @@ Route::group(['middleware' => 'auth'], function () {
 Route::group(['middleware' => 'auth'], function () {
 	Route::resource('user', 'App\Http\Controllers\UserController', ['except' => ['show']]);
 	Route::resource('tran_edit', 'App\Http\Controllers\TransectionController');
+	Route::resource('information', 'App\Http\Controllers\InformationController');
 
 	Route::get('profile', ['as' => 'profile.edit', 'uses' => 'App\Http\Controllers\ProfileController@edit']);
 	Route::post('profile', ['as' => 'profile.update', 'uses' => 'App\Http\Controllers\ProfileController@update']);

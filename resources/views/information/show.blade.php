@@ -1,4 +1,4 @@
-@extends('layouts.app', ['page' => __('Profile Details'), 'pageSlug' => 'details'])
+@extends('layouts.app', ['page' => __('Profile Details'), 'pageSlug' => 'information'])
 
 @section('content')
     <div class="row">
@@ -7,13 +7,17 @@
                 <div class="card-header">
                     <h4 class="title">{{ __('Profile Details') }}</h4>
                 </div>
-                <form method="post" action="#" autocomplete="off">
+                <!-- <form method="post" action="#" autocomplete="off"> -->
                     <div class="card-body">
-                            @csrf
+                            <!-- @csrf -->
                            <!-- detete method -->
 
-                            @include('alerts.success')
-                            
+                            <!-- @include('alerts.success') -->
+                            <div class="form-group">
+                                <label><h3>{{ __('Id => ') }}</h3></label>
+                                <label><h2>{{$user->id}}</h2></label>
+                            </div>
+
                             <div class="form-group">
                                 <label><h3>{{ __('Name => ') }}</h3></label>
                                 <label><h2>{{$user->name}}</h2></label>
@@ -47,7 +51,7 @@
                     <div class="card-footer">
                         <button type="submit" class="btn btn-fill btn-primary">{{ __('Back') }}</button>
                     </div>
-                </form>
+                <!-- </form> -->
             </div>
 
         </div>

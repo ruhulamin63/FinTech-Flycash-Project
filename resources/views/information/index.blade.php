@@ -19,6 +19,7 @@
                 <th>NID</th>
                 <th>DOB</th>
                 <th>Type</th>
+                <th>Action</th>
               </tr>
             </thead>
             <tbody>
@@ -29,17 +30,14 @@
                 <td>{{$user->name}}</td>
                 <td>{{$user->email}}</td>
                 <td>{{$user->phone}}</td>
-                <td>{{$user->ind}}</td>
+                <td>{{$user->nid}}</td>
                 <td>{{$user->dob}}</td>
                 <td>{{$user->type}}</td>
 
                 <td>
-                    <a href="/informaiton/details/{{$user->id}}">Details</a> | 
-                    <a href="/user/delete/{{$user->id}}">Delete</a> 
-
-                  <a href="/informaiton/details/{{$user->id}}">
+                  <a href="{{ route('information.show', $user->id) }}">
                       <i class="tim-icons icon-pencil"></i>
-                        Edit
+                        details
                   </a> | 
                   <a href="/informaiton/delete/{{$user->id}}">
                     <i class="tim-icons icon-trash-simple"></i>
@@ -47,6 +45,8 @@
                   </a>
                 </td>
               </tr>
+            @endforeach
+
             </tbody>
           </table>
         </div>

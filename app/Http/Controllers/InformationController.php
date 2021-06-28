@@ -17,7 +17,7 @@ class InformationController extends Controller
     {
         $users = DB::table('informations')->get(); //Query Builder
 
-        return view('user.list')->with('userlist', $users);
+        return view('information.index')->with('userlist', $users);
     }
 
     /**
@@ -49,9 +49,12 @@ class InformationController extends Controller
      */
     public function show(Information $information)
     {
-        $user = Information::find($information); // Model Query
+        //dd($information);
+        $user = Information::where('id',$information)->first(); // Model Query
 
-        return view('user.details')->with('user', $user);
+        
+
+        return view('information.show')->with('user', $user);
     }
 
     /**
