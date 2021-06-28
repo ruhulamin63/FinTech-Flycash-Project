@@ -5,12 +5,12 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">
-                    <h4 class="title">{{ __('Communication Officer Profile') }}</h4>
+                    <h4 class="title">{{ __('My Profile') }}</h4>
                 </div>
                 <form method="post" action="{{ route('profile.update') }}" autocomplete="off">
                     <div class="card-body">
                             @csrf
-                            @method('put')
+                            @method('post')
 
                             @include('alerts.success')
 
@@ -101,7 +101,7 @@
                             <div class="block block-four"></div>
                             <a href="#">
                                 <img class="avatar" src="{{ asset('black') }}/img/anime6.png" alt="">
-                                <h5 class="title">{{ __('Communication Officer') }}</h5>
+                                <h5 class="title">{{ __('My Profile') }}</h5>
                             </a>
                             <p class="description">
                                 {{ __('Profile') }}
@@ -109,7 +109,7 @@
                         </div>
                     </p>
                     <div class="card-description">
-                        {{ __('Hello Everyone, Always "Never Give Up"...') }}
+                        {{ __('Hello Everyone, Always' )}} <br> {{__('Never Give Up"...') }}
                     </div>
                 </div>
                 <div class="card-footer">

@@ -25,10 +25,12 @@ Route::get('/home','App\Http\Controllers\HomeController@index')->name('home')->m
 
 Route::group(['middleware' => 'auth'], function () {
 
-	Route::get('agent', ['as' => 'agent.edit', 'uses' => 'App\Http\Controllers\AgentProfileController@edit']);
-	Route::get('users', ['as' => 'users.seeinfo', 'uses' => 'App\Http\Controllers\SeeUserProfileController@seeinfo']);
-	Route::get('users', ['as' => 'users.details', 'uses' => 'App\Http\Controllers\UserdetailsController@details']);
-	Route::get('agentdetails', ['as' => 'agentdetails.index', 'uses' => 'App\Http\Controllers\AgentdetailsController@index']);
+	Route::get('agentinfo', ['as' => 'agent.edit', 'uses' => 'App\Http\Controllers\AgentProfileController@edit']);
+	Route::get('agentdetails', ['as' => 'agent.index', 'uses' => 'App\Http\Controllers\AgentdetailsController@index']);
+
+	Route::get('userprofile', ['as' => 'users.seeinfo', 'uses' => 'App\Http\Controllers\SeeUserProfileController@seeinfo']);
+	Route::get('userdetails', ['as' => 'users.details', 'uses' => 'App\Http\Controllers\UserdetailsController@details']);
+	
 
 //***************************************************************************************************************************
 
@@ -49,6 +51,8 @@ Route::group(['middleware' => 'auth'], function () {
 
 Route::group(['middleware' => 'auth'], function () {
 	Route::resource('user', 'App\Http\Controllers\UserController', ['except' => ['show']]);
+	Route::resource('tran_edit', 'App\Http\Controllers\TransectionController');
+
 	Route::get('profile', ['as' => 'profile.edit', 'uses' => 'App\Http\Controllers\ProfileController@edit']);
 	Route::post('profile', ['as' => 'profile.update', 'uses' => 'App\Http\Controllers\ProfileController@update']);
 	Route::post('profile/password', ['as' => 'profile.password', 'uses' => 'App\Http\Controllers\ProfileController@password']);

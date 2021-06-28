@@ -23,6 +23,6 @@ class AgentdetailsController extends Controller
      */
     public function index()
     {
-        return view('agentdetails.index');
+        return view('agent.index');
     }
 }

@@ -16,7 +16,7 @@
                 <th>Agent Number</th>
                 <th>Type</th>
                 <th>Amount</th>
-                <th class="text-center">Date</th>
+                <th>Date</th>
                 <th>Action</th>
               </tr>
             </thead>
@@ -26,14 +26,14 @@
                 <td>017******</td>
                 <td>Cash Out</td>
                 <td>5000</td>
-                <td class="text-center">5-Jun-2021, 12:30 pm</td>
+                <td>5-Jun-2021, 12:30 pm</td>
                 <td>
-                  <a href="{{ route('eachuser.index')  }}">
-                    <i class="tim-icons icon-single-02"></i>
+                  <a href="/transection/tran_edit">
+                    <i class="tim-icons icon-pencil"></i>
                       Edit
                   </a> | 
-                  <a href="{{ route('#')  }}">
-                    <i class="tim-icons icon-single-02"></i>
+                  <a href="#">
+                    <i class="tim-icons icon-trash-simple"></i>
                     delete
                   </a>
                 </td>

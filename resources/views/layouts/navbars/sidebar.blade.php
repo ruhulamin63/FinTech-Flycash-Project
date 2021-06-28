@@ -11,34 +11,25 @@
         <ul class="nav">
             <li @if ($pageSlug == 'dashboard') class="active " @endif>
                 <a href="{{ route('home') }}">
-                    <i class="tim-icons icon-chart-pie-36"></i>
+                    <i class="tim-icons icon-bank"></i>
                     <p>{{ __('Dashboard') }}</p>
                 </a>
             </li>
+<!-- ======================================================================================= -->
             <li>
-                <a data-toggle="collapse" href="#laravel-examples" aria-expanded="true">
+                <a data-toggle="collapse" href="#laravel-example" aria-expanded="false">
                     <i class="tim-icons icon-pin" ></i>
                     <span class="nav-link-text" >{{ __('Contract') }}</span>
                     <b class="caret mt-1"></b>
                 </a>
 
-                <div class="collapse show" id="laravel-examples">
+                <div class="collapse show" id="laravel-example">
                     <ul class="nav pl-4">
+                    
                         <li @if($pageSlug == 'userprofile') class="active " @endif>
-                            <a href="#">
-                                <i class="tim-icons icon-bullet-list-67"></i>
-                                <p>{{ __('See User') }}</p>
-                            </a>
-                        </li><li @if($pageSlug == 'userprofile') class="active " @endif>
-                            <a href="#">
+                            <a href="{{ route('users.seeinfo')  }}">
                                 <i class="tim-icons icon-single-02"></i>
                                 <p>{{ __('See User') }}</p>
-                            </a>
-                        </li>
-                        <li @if($pageSlug == 'users') class="active " @endif>
-                            <a href="{{ route('user.index')  }}">
-                                <i class="tim-icons icon-bullet-list-67"></i>
-                                <p>{{ __('User Management') }}</p>
                             </a>
                         </li>
                          <li @if($pageSlug == 'userdetails') class="active " @endif>
@@ -47,30 +38,62 @@
                                 <p>{{ __('User Details') }}</p>
                             </a>
                         </li>
-                        <li  @if($pageSlug == 'profile') class="active " @endif>
+                        <li  @if($pageSlug == 'ageninfo') class="active " @endif>
                             <a href="{{route('agent.edit')}}">
                                 <i class="tim-icons icon-single-02"></i>
-                                <p>{{ __('Agent Profile') }}</p>
+                                <p>{{ __('See Agent') }}</p>
                             </a>
                         </li>
                         <li @if($pageSlug == 'agentdetails') class="active " @endif>
-                            <a href="{{route('agentdetails.index')}}">
+                            <a href="{{route('agent.index')}}">
                                 <i class="tim-icons icon-single-02"></i>
                                 <p>{{ __('Agent Details') }}</p>
+                            </a>
+                        </li>
+                        <li @if($pageSlug == 'users') class="active " @endif>
+                            <a href="{{ route('user.index')  }}">
+                                <i class="tim-icons icon-bullet-list-67"></i>
+                                <p>{{ __('User Management') }}</p>
                             </a>
                         </li>
                     </ul>
                 </div>
             </li>
-            <li >
-                <a href="{{ route('profile.edit') }}">
-                    <i class="tim-icons icon-settings"></i>
-                    <p>{{ __('Setting') }}</p>
-                </a>
-            </li>
+<!-- ================================================================================= -->
             <li>
+                <a data-toggle="collapse" href="#laravel-examples" aria-expanded="true">
+                    <i class="tim-icons icon-pin" ></i>
+                    <span class="nav-link-text" >{{ __('Setting') }}</span>
+                    <b class="caret mt-1"></b>
+                </a>
+
+                <div class="collapse show" id="laravel-examples">
+                    <ul class="nav pl-4">
+                        <li @if ($pageSlug == 'profile') class="active " @endif>
+                            <a href="{{ route('profile.edit') }}">
+                                <i class="tim-icons icon-simple-add"></i>
+                                <p>{{ __('My Profile') }}</p>
+                            </a>
+                        </li>
+                        <li  @if($pageSlug == '#') class="active " @endif>
+                            <a href="#">
+                                <i class="tim-icons icon-app"></i>
+                                <p>{{ __('Forward Message List') }}</p>
+                            </a>
+                            </li>
+                        <li @if($pageSlug == '#') class="active " @endif>
+                            <a href="#">
+                                <i class="tim-icons icon-key-25"></i>
+                                <p>{{ __('Change Password') }}</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+<!-- ================================================================================= -->
+            <li  @if ($pageSlug == 'information') class="active " @endif>
                 <a href="{{route('information.index')}}">
-                    <i class="tim-icons icon-single-02"></i>
+                    <i class="tim-icons icon-paper"></i>
                     <p>{{ __('Information') }}</p>
                 </a>
             </li>
