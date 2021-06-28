@@ -28,7 +28,7 @@
                 <td>5000</td>
                 <td>5-Jun-2021, 12:30 pm</td>
                 <td>
-                  <a href="/transection/tran_edit">
+                  <a href="/transection/tran_edit/">
                     <i class="tim-icons icon-pencil"></i>
                       Edit
                   </a> | 

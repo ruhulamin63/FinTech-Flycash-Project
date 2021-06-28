@@ -12,6 +12,7 @@
           <table class="table tablesorter " id="">
             <thead class=" text-primary">
               <tr>
+                <th>Id</th>
                 <th>Name</th>
                 <th>Email</th>
                 <th >Phone</th>
@@ -21,22 +22,30 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>Korim</td>
-                <td>abc@gmail.com</td>
-                <td>+880 1689-385783</td>
-                <td>35352342422</td>
-                <td>10-jul-1970</td>
-                <td>User</td>
-              </tr>
 
+            @foreach($userlist as $user)
               <tr>
-                <td>Rohim</td>
-                <td>xyz@gmail.com</td>
-                <td>+880 1789-455783</td>
-                <td>35365654645</td>
-                <td>05-May-1970</td>
-                <td>Agent</td>
+                <td>{{$user->id}}</td>
+                <td>{{$user->name}}</td>
+                <td>{{$user->email}}</td>
+                <td>{{$user->phone}}</td>
+                <td>{{$user->ind}}</td>
+                <td>{{$user->dob}}</td>
+                <td>{{$user->type}}</td>
+
+                <td>
+                    <a href="/informaiton/details/{{$user->id}}">Details</a> | 
+                    <a href="/user/delete/{{$user->id}}">Delete</a> 
+
+                  <a href="/informaiton/details/{{$user->id}}">
+                      <i class="tim-icons icon-pencil"></i>
+                        Edit
+                  </a> | 
+                  <a href="/informaiton/delete/{{$user->id}}">
+                    <i class="tim-icons icon-trash-simple"></i>
+                      delete
+                  </a>
+                </td>
               </tr>
             </tbody>
           </table>
