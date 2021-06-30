@@ -373,7 +373,6 @@
     </div>
 ================================================= -->
 
-    <h1>Hello, Ruhul Amin</h1>
     <table align="center">
         <tr>
             <td><h1>Welcome To Our FlyCash Apps</h1></td>

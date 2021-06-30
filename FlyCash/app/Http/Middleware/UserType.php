@@ -16,7 +16,7 @@ class UserType
      */
     public function handle(Request $request, Closure $next)
     {
-        if($request->session()->get('uname')=='raridoy'){
+        if($request->session()->get('email')=='admin@black.com'){
             return $next($request);
         }else{
             return redirect('/home');
