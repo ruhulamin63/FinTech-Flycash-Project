@@ -5,7 +5,7 @@
         <!-- <h3 class="mb-5">Log in to see how you can speed up your web development with out of the box CRUD for #User Management and more.</h3> -->
     </div>
     <div class="col-lg-4 col-md-6 ml-auto mr-auto">
-        <form class="form" method="post" action="{{ route('login') }}">
+        <form class="form" method="post" action="#">
             @csrf
 
             <div class="card card-login card-white">
@@ -14,7 +14,7 @@
                     <h1 align="center" class="card-title">{{ __('Log in') }}</h1>
                 </div>
                 <div class="card-body">
-                    <!-- <p class="text-dark mb-2">Sign in with <strong>admin@black.com</strong> and the password <strong>secret</strong></p> -->
+                    <p class="text-dark mb-2">Sign in with <strong>admin@black.com</strong> and the password <strong>secret</strong></p>
                     <div class="input-group{{ $errors->has('email') ? ' has-danger' : '' }}">
                         <div class="input-group-prepend">
                             <div class="input-group-text">
@@ -38,12 +38,12 @@
                     <button type="submit" href="" class="btn btn-primary btn-lg btn-block mb-3">{{ __('Log in') }}</button>
                     <div class="pull-left">
                         <h6>
-                            <a href="{{ route('register') }}" class="link footer-link">{{ __('Create Account') }}</a>
+                            <a href="#" class="link footer-link">{{ __('Create Account') }}</a>
                         </h6>
                     </div>
                     <div class="pull-right">
                         <h6>
-                            <a href="{{ route('password.request') }}" class="link footer-link">{{ __('Forgot password?') }}</a>
+                            <a href="#" class="link footer-link">{{ __('Forgot password?') }}</a>
                         </h6>
                     </div>
                 </div>

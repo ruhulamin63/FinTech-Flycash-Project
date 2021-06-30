@@ -15013,7 +15013,7 @@ table.tablesorter thead tr .headerSortDown {
   display: block;
   text-decoration: none;
   position: relative;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   cursor: pointer;
   font-size: 0.62475rem;
   padding: 10px 8px;
@@ -17315,7 +17315,7 @@ Copyright (c) 2015 Daniel Eden
 }
 
 .card .map.map-big {
-  height: 420px;
+  height: 240px;
 }
 
 .card.card-white {
@@ -17482,7 +17482,7 @@ Copyright (c) 2015 Daniel Eden
 
 .card .image {
   overflow: hidden;
-  height: 200px;
+  height: 100px;
   position: relative;
 }
 

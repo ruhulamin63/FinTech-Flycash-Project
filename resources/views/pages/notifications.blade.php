@@ -9,33 +9,32 @@
       </div>
       <div class="card-body">
         <div class="alert alert-info">
-          <span>Agent transection issue notification</span>
+          <span>This is a plain notification</span>
         </div>
         <div class="alert alert-info">
           <button type="button" aria-hidden="true" class="close" data-dismiss="alert" aria-label="Close">
             <i class="tim-icons icon-simple-remove"></i>
           </button>
-          <span>User need help.</span>
+          <span>This is a notification with close button.</span>
         </div>
         <div class="alert alert-info alert-with-icon" data-notify="container">
           <button type="button" aria-hidden="true" class="close" data-dismiss="alert" aria-label="Close">
             <i class="tim-icons icon-simple-remove"></i>
           </button>
           <span data-notify="icon" class="tim-icons icon-bell-55"></span>
-          <span data-notify="message">User balance issue.</span>
+          <span data-notify="message">This is a notification with close button and icon.</span>
         </div>
         <div class="alert alert-info alert-with-icon" data-notify="container">
           <button type="button" aria-hidden="true" class="close" data-dismiss="alert" aria-label="Close">
             <i class="tim-icons icon-simple-remove"></i>
           </button>
           <span data-notify="icon" class="tim-icons icon-bell-55"></span>
-          <span data-notify="message">Admin update data informaiton </span>
+          <span data-notify="message">This is a notification with close button and icon and have many lines. You can see that the icon and the close button are always vertically aligned. This is a beautiful notification. So you don't have to worry about the style.</span>
         </div>
       </div>
     </div>
   </div>
-<!-- ============================================ -->
-  <!-- <div class="col-md-6">
+  <div class="col-md-6">
     <div class="card">
       <div class="card-header">
         <h4 class="card-title">Notification states</h4>
@@ -78,9 +77,8 @@
         </div>
       </div>
     </div>
-  </div> -->
-
-  <!-- <div class="col-md-12">
+  </div>
+  <div class="col-md-12">
     <div class="card">
       <div class="card-body">
         <div class="places-buttons">
@@ -125,5 +123,5 @@
         </div>
       </div>
     </div>
-  </div> -->
+  </div>
 @endsection
