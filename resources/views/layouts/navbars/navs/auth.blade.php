@@ -8,7 +8,7 @@
                     <span class="navbar-toggler-bar bar3"></span>
                 </button>
             </div>
-            <a class="navbar-brand" href="#">{{ $page ?? __('Dashboard') }}</a>
+            <a class="navbar-brand" href="#">{{ __('Dashboard') }}</a>
         </div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
             <span class="navbar-toggler-bar navbar-kebab"></span>
@@ -32,19 +32,16 @@
                     </a>
                     <ul class="dropdown-menu dropdown-menu-right dropdown-navbar">
                         <li class="nav-link">
-                            <a href="#" class="nav-item dropdown-item">{{ __('Mike John responded to your email') }}</a>
+                            <a href="#" class="nav-item dropdown-item">{{ __('Jhid Hasan sent a message') }}</a>
                         </li>
                         <li class="nav-link">
-                            <a href="#" class="nav-item dropdown-item">{{ __('You have 5 more tasks') }}</a>
+                            <a href="#" class="nav-item dropdown-item">{{ __('User can need help') }}</a>
                         </li>
                         <li class="nav-link">
-                            <a href="#" class="nav-item dropdown-item">{{ __('Your friend Michael is in town') }}</a>
+                            <a href="#" class="nav-item dropdown-item">{{ __('Agent transection issue') }}</a>
                         </li>
                         <li class="nav-link">
                             <a href="#" class="nav-item dropdown-item">{{ __('Another notification') }}</a>
-                        </li>
-                        <li class="nav-link">
-                            <a href="#" class="nav-item dropdown-item">{{ __('Another one') }}</a>
                         </li>
                     </ul>
                 </li>
@@ -57,9 +54,6 @@
                     </a>
                     <ul class="dropdown-menu dropdown-menu-right dropdown-navbar">
                         <li class="nav-link">
-                            <a href="#" class="nav-item dropdown-item">{{ __('Ruhul Amin') }}</a>
-                        </li>
-                        <li class="nav-link">
                             <a href="#" class="nav-item dropdown-item">{{ __('Jahid Hasan') }}</a>
                         </li>
                         <li class="nav-link">
@@ -68,16 +62,13 @@
                         <li class="nav-link">
                             <a href="#" class="nav-item dropdown-item">{{ __('Fiyaz Khan') }}</a>
                         </li>
-                        <li class="nav-link">
-                            <a href="#" class="nav-item dropdown-item">{{ __('Koly Islam') }}</a>
-                        </li>
                     </ul>
                 </li>
 <!-- =================================================================================== -->
                 <li class="dropdown nav-item">
                     <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
                         <div class="photo">
-                            <img src="{{ asset('black') }}/img/anime3.png" alt="{{ __('Profile Photo') }}">
+                            <img src="{{ asset('black') }}/img/hi.png" alt="{{ __('Profile Photo') }}">
                         </div>
                         <b class="caret d-none d-lg-block d-xl-block"></b>
                         <p class="d-lg-none">{{ __('Log out') }}</p>
@@ -91,7 +82,7 @@
                         </li>
                         <li class="dropdown-divider"></li>
                         <li class="nav-link">
-                            <a href="{{route('logout')}}" class="nav-item dropdown-item" onclick="event.preventDefault();  document.getElementById('logout-form').submit();">{{ __('Log out') }}</a>
+                            <a href="/logout" class="nav-item dropdown-item" onclick="event.preventDefault();  document.getElementById('logout-form').submit();">{{ __('Log out') }}</a>
                         </li>
                     </ul>
                 </li>

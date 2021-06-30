@@ -13,18 +13,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/register', ['as'=>'register.register', 'uses'=>'RegisterController@index']);
-Route::post('/register', 'RegisterController@insert');
+	Route::get('/register', 'RegisterController@index');
+	Route::post('/register', 'RegisterController@insert');
 
-Route::get('/login', 'LoginController@index');
-Route::post('/login', 'LoginController@verify');
+	Route::get('/login', 'LoginController@index');
+	Route::post('/login', 'LoginController@verify');	
 
-Route::get('/logout', 'LogoutController@index')->name('logout');
+	Route::get('/logout', 'LogoutController@index');
+	
 
 
-Route::group(['middleware' =>['sess']], function () {
-	Route::get('/home','HomeController@index')->name('home');
-});
+	Route::group(['middleware' =>['sess']], function () {
+		Route::get('/home','HomeController@index')->name('home');
+	});
 
 // Route::group(['middleware' =>['sess']], function () {
 

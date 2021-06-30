@@ -10,7 +10,7 @@
                 <div class="description">
                     <h3 class="info-title">{{ __('Marketing') }}</h3>
                     <p class="description">
-                        {{ __('We\'ve created the marketing campaign of the website. It was a very interesting collaboration.') }}
+                        {{ __('Hello...') }}
                     </p>
                 </div>
             </div>
@@ -20,9 +20,9 @@
                     <i class="tim-icons icon-trophy"></i>
                 </div>
                 <div class="description">
-                    <h3 class="info-title">{{ __('Built Audience') }}</h3>
+                    <h3 class="info-title">{{ __('Business') }}</h3>
                     <p class="description">
-                        {{ __('There is also a Fully Customizable CMS Admin Dashboard for this product.') }}
+                        {{ __('Hi...') }}
                     </p>
                 </div>
             </div>
@@ -33,7 +33,7 @@
                 <img src="{{ asset('black') }}/img/flycash.png" alt="">
                     <h4 align= "center" class="card-title">{{ __('Registration') }}</h4>
                 </div>
-                <form class="form" method="post" action="{{ route('register') }}">
+                <form class="form" method="post">
                     @csrf
 
                     <div class="card-body">
@@ -72,7 +72,7 @@
                             </div>
                             <input type="password" name="password_confirmation" class="form-control" placeholder="{{ __('Confirm Password') }}">
                         </div> -->
-                        <!-- <div class="input-group{{ $errors->has('phone') ? ' has-danger' : '' }}">
+                        <div class="input-group{{ $errors->has('phone') ? ' has-danger' : '' }}">
                             <div class="input-group-prepend">
                                 <div class="input-group-text">
                                     <i class="tim-icons icon-lock-circle"></i>
@@ -114,7 +114,7 @@
                             <option value="Admin" name= "admin" placeholder="{{ __('Account Type') }}">Communication Officer</option>
                             </select>
                             @include('alerts.feedback', ['field' => 'type'])
-                        </div> -->
+                        </div>
                     </div>
                     <div class="card-footer">
                         <button type="submit" class="btn btn-primary btn-round btn-lg">{{ __('Sign Up') }}</button>
