@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\User;
+use App\Models\Officer;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB; //Import query builser 
 
@@ -15,15 +15,10 @@ class UserController extends Controller
      */
     public function index()
     {
-        // $users = User::all();
-        $users = DB::table('users')->get(); //Query Builder
+        // $users = Officer::all();
+        $users = DB::table('officers')->get(); //Query Builder
 
-        // if($users->type=='Admin'){
-             
-        // }else{
-            //return view('pages.communication.agent.index')->with('agentlist', $users);
-            return view('pages.communication.information.index')->with('userlist', $users);
-        //}
+        return view('pages.officer.information.index')->with('userlist', $users);
     }
 
     /**
@@ -50,10 +45,10 @@ class UserController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\User  $user
+     * @param  \App\Models\Officer  $user
      * @return \Illuminate\Http\Response
      */
-    public function show(User $user)
+    public function show(Officer $user)
     {
         //
     }
@@ -61,26 +56,26 @@ class UserController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\User  $user
+     * @param  \App\Models\Officer  $user
      * @return \Illuminate\Http\Response
      */
-    public function edit(User $user)
+    public function edit(Officer $user)
     {
-        $users= User::find($user);
+        $users= Officer::find($user);
 
-        return view('pages.communication.profile.edit')->with('user', $users);
+        return view('pages.officer.profile.edit')->with('user', $users);
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\User  $user
+     * @param  \App\Models\Officer  $user
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $req, User $user)
+    public function update(Request $req, Officer $user)
     {
-        $users = User::find($user);
+        $users = Officer::find($user);
         
         $users->name = $req->name;
         // if($users->password != $req->password){
@@ -99,10 +94,10 @@ class UserController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\User  $user
+     * @param  \App\Models\Officer  $user
      * @return \Illuminate\Http\Response
      */
-    public function destroy(User $user)
+    public function destroy(Officer $user)
     {
         //
     }

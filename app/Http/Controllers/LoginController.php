@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Validator;
 use App\Http\Requests\RegRequest;
-use App\Models\User;
+use App\Models\Officer;
 
 class LoginController extends Controller
 {
@@ -17,7 +17,7 @@ class LoginController extends Controller
     public function verify(Request $req){
         //dd($req); //this line for debug for this code
     
-        $user = User::where('email',$req->email)
+        $user = Officer::where('email',$req->email)
             ->where('password',$req->password)
             ->first();
             

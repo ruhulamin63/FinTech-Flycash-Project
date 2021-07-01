@@ -26,28 +26,17 @@
                 <div class="collapse show" id="laravel-example">
                     <ul class="nav pl-4">
                     
-                        <li>
-                            <a href="#">
+                        <li @if ($pageSlug == 'customerdetails') class="active " @endif>
+                            <a href="{{route('customer_show')}}">
                                 <i class="tim-icons icon-single-02"></i>
-                                <p>{{ __('See User') }}</p>
+                                <p>{{ __('See Customer') }}</p>
                             </a>
                         </li>
-                         <li>
-                            <a href="#">
-                                <i class="tim-icons icon-single-02"></i>
-                                <p>{{ __('User Details') }}</p>
-                            </a>
-                        </li>
-                        <li >
-                            <a href="#">
+            
+                        <li @if ($pageSlug == 'agentinfo') class="active " @endif>
+                            <a href="{{route('agent_index')}}">
                                 <i class="tim-icons icon-single-02"></i>
                                 <p>{{ __('See Agent') }}</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="tim-icons icon-single-02"></i>
-                                <p>{{ __('Agent Details') }}</p>
                             </a>
                         </li>
                         <li>
@@ -69,10 +58,10 @@
 
                 <div class="collapse show" id="laravel-examples">
                     <ul class="nav pl-4">
-                        <li >
+                        <li @if ($pageSlug == 'profile') class="active " @endif>
                             <a href="{{route('profile_edit')}}">
-                                <i class="tim-icons icon-simple-add"></i>
-                                <p>{{ __('My Profile') }}</p>
+                                <i class="tim-icons icon-pencil"></i>
+                                <p>{{ __('Profile') }}</p>
                             </a>
                         </li>
                         <li >
@@ -82,7 +71,7 @@
                             </a>
                             </li>
                         <li>
-                            <a href="#">
+                            <a href="{{route('password_edit')}}">
                                 <i class="tim-icons icon-key-25"></i>
                                 <p>{{ __('Change Password') }}</p>
                             </a>
@@ -91,7 +80,7 @@
                 </div>
             </li>
 <!-- ================================================================================= -->
-            <li >
+            <li @if ($pageSlug == 'information') class="active " @endif>
                 <a href="{{route('information_details')}}">
                     <i class="tim-icons icon-paper"></i>
                     <p>{{ __('Information') }}</p>

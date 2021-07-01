@@ -27,14 +27,27 @@ use Illuminate\Support\Facades\Route;
 
 		Route::get('/home','HomeController@index')->name('home');
 
-	// 	Route::get('agentinfo', ['as' => 'agent.edit', 'uses' => 'AgentProfileController@edit']);
-	// 	Route::get('agentdetails', ['as' => 'agent.index', 'uses' => 'AgentdetailsController@index']);
+//============================================================================================================
 
-	// 	Route::get('userprofile', ['as' => 'users.seeinfo', 'uses' => 'SeeUserProfileController@seeinfo']);
-	// 	Route::get('userdetails', ['as' => 'users.details', 'uses' => 'UserdetailsController@details']);
+		Route::get('/pages/officer/agent/index','AgentController@index')->name('agent_index');
+
+		Route::get('/pages/officer/agent/edit/{id}', 'AgentController@edit')->name('agent_edit');
+		Route::post('/pages/officer/agent/edit/{id}', 'AgentController@update');
+
+		Route::get('/pages/officer/agent/delete/{id}', 'AgentController@delete');
+		Route::post('/pages/officer/agent/delete/{id}', 'AgentController@destroy')->name('agent_delete');
+
+//============================================End Agent Routing===================================================
+
+		Route::get('/pages/officer/customer/show','CustomerController@show')->name('customer_show');
+
+		Route::get('/pages/officer/customer/edit/{id}', 'CustomerController@edit')->name('customer_edit');
+		Route::post('/pages/officer/customer/edit/{id}', 'CustomerController@update');
+
+		Route::get('/pages/officer/customer/delete/{id}', 'CustomerController@delete');
+		Route::get('/pages/officer/customer/delete/{id}', 'CustomerController@destroy')->name('customer_delete');
 		
-
-	// //***************************************************************************************************************************
+//**********************************************End Customer Routing************************************************
 
 	// 	Route::get('transection', ['as' => 'transection.tran', 'uses' => 'TranController@tran']);
 	// 	Route::get('information', ['as' => 'information.index', 'uses' => 'AllInfoDataController@index']);
@@ -56,10 +69,13 @@ use Illuminate\Support\Facades\Route;
 	Route::group(['middleware' =>['sess']], function () {
 
 		Route::resource('user', 'UserController');
-		Route::get('/pages/communication/information','UserController@index')->name('information_details');
+		Route::get('/pages/officer/information','UserController@index')->name('information_details');
 		
-		Route::get('/pages/communication/profile','UserController@edit')->name('profile_edit');
-		Route::post('/pages/communication/profile','UserController@update')->name('profile_update');
+		Route::get('/pages/officer/profile','UserController@edit')->name('profile_edit');
+		Route::post('/pages/officer/profile','UserController@update')->name('profile_update');
+
+		Route::get('/pages/officer/password','PassController@edit')->name('password_edit');
+		Route::post('/pages/officer/password','PassController@update')->name('password_update');
 
 	// 	Route::resource('tran_edit', 'TransectionController');
 

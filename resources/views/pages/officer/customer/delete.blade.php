@@ -1,11 +1,11 @@
-@extends('layouts.app', ['page' => __('Agent Profile'), 'pageSlug' => 'ageninfo'])
+@extends('layouts.app', ['page' => __('User Profile'), 'pageSlug' => 'customerdetails'])
 
 @section('content')
     <div class="row">
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">
-                    <h4 class="title">{{ __('Agent Profile') }}</h4>
+                    <h4 class="title">{{ __('Customer Profile') }}</h4>
                 </div>
                 <form method="post" action="#" autocomplete="off">
                     <div class="card-body">
@@ -13,50 +13,44 @@
                             @method('put')
 
                             @include('alerts.success')
-
-                            <div class="form-group{{ $errors->has('name') ? ' has-danger' : '' }}">
-                                <label>{{ __('Name') }}</label>
-                                <input type="text" name="name" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" placeholder="{{ __('Name') }}" value="{{ __('Rohim') }}">
-                                @include('alerts.feedback', ['field' => 'name'])
+                            
+                            <div class="form-group">
+                                <label><h3>{{ __('Name => ') }}</h3></label>
+                                <label><h2>{{ __('Korim') }}</h2></label>
                             </div>
 
                             <div class="form-group{{ $errors->has('email') ? ' has-danger' : '' }}">
-                                <label>{{ __('Email address') }}</label>
-                                <input type="email" name="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" placeholder="{{ __('Email address') }}" value="{{ __('abc@gmail.com') }}">
-                                @include('alerts.feedback', ['field' => 'email'])
+                                <label><h3>{{ __('Email address => ') }}</h3></label>
+                                <label><h2>{{ __('xyz@gmail.com') }}</h2></label>
                             </div>
 
                             <div class="form-group">
-                                <label>{{ __('Phone Number') }}</label>
-                                <input type="text" name="phone" class="form-control" placeholder="{{ __('Phone number') }}" value="{{ __('+880****') }}">
-                                @include('alerts.feedback', ['field' => 'phone'])
+                                <label><h3>{{ __('Phone No => ') }}</h3></label>
+                                <label><h2>{{ __('+88 017***') }}</h2></label>
                             </div>
 
                             <div class="form-group">
-                                <label>{{ __('NID') }}</label>
-                                <input type="text" name="nid" class="form-control" placeholder="{{ __('NID Number') }}" value="{{ __('1998*****') }}">
-                                @include('alerts.feedback', ['field' => 'nid'])
+                                <label><h3>{{ __('NID No => ') }}</h3></label>
+                                <label><h2>{{ __('1998***') }}</h2></label>
                             </div>
 
                             <div class="form-group">
-                                <label>{{ __('DOB') }}</label>
-                                <input type="date" name="dob" class="form-control" placeholder="{{ __('Date of Birth') }}" value="{{ __('5/4/1998') }}">
-                                @include('alerts.feedback', ['field' => 'nid'])
+                                <label><h3>{{ __('DOB => ') }}</h3></label>
+                                <label><h2>{{ __('05-Feb-1998') }}</h2></label>
                             </div>
 
                             <div class="form-group">
-                                <label>{{ __('Type') }}</label>
-                                <input type="text" name="type" class="form-control" placeholder="{{ __('Type') }}" value="{{ __('Agent') }}">
-                                @include('alerts.feedback', ['field' => 'nid'])
+                                <label><h3>{{ __('Type => ') }}</h3></label>
+                                <label><h2>{{ __('User') }}</h2></label>
                             </div>
                     </div>
                     <div class="card-footer">
-                        <button type="submit" class="btn btn-fill btn-primary">{{ __('Save') }}</button>
+                        <button type="submit" class="btn btn-fill btn-primary">{{ __('Delete') }}</button>
                     </div>
                 </form>
             </div>
-        </div>
 
+        </div>
         <div class="col-md-4">
             <div class="card card-user">
                 <div class="card-body">
@@ -67,11 +61,11 @@
                             <div class="block block-three"></div>
                             <div class="block block-four"></div>
                             <a href="#">
-                                <img class="avatar" src="{{ asset('black') }}/img/DP.png" alt="">
-                                <h5 class="title">{{ __('Agent') }}</h5>
+                                <img class="avatar" src="{{ asset('black') }}/img/anime3.png" alt="">
+                                <h5 class="title">{{ $user->name }}</h5>
                             </a>
                             <p class="description">
-                                {{ __('Agent Profile') }}
+                                {{ __('Customer Profile') }}
                             </p>
                         </div>
                     </p>
