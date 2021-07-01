@@ -24,7 +24,11 @@ class RegRequest extends FormRequest
     public function rules()
     {
         return [
-            'email'=>'required|min:8',
+            'name'=>'required|min:4|max:50',
+            'email'=>'required|min:8|max:50',
+            'phone'=>'required|min:11',
+            'nid'=>'required|min:8',
+            'dob'=>'required|min:6',
             'password'=>'required|min:8|max:20'
         ];
     }

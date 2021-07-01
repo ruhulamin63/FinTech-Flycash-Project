@@ -48,39 +48,30 @@ use Illuminate\Support\Facades\Route;
 		Route::get('/pages/officer/customer/delete/{id}', 'CustomerController@destroy')->name('customer_delete');
 		
 //**********************************************End Customer Routing************************************************
+		
+		// 	Route::get('transection', ['as' => 'transection.tran', 'uses' => 'TranController@tran']);
+		// 	Route::get('icons', ['as' => 'pages.icons', 'uses' => 'PageController@icons']);
+		// 	Route::get('notifications', ['as' => 'pages.notifications', 'uses' => 'PageController@notifications']);
 
-	// 	Route::get('transection', ['as' => 'transection.tran', 'uses' => 'TranController@tran']);
-	// 	Route::get('information', ['as' => 'information.index', 'uses' => 'AllInfoDataController@index']);
-
-
-	// //=========================================================================================================================	
-
-	// 	Route::get('icons', ['as' => 'pages.icons', 'uses' => 'PageController@icons']);
-	// 	Route::get('maps', ['as' => 'pages.maps', 'uses' => 'PageController@maps']);
-	// 	Route::get('notifications', ['as' => 'pages.notifications', 'uses' => 'PageController@notifications']);
-	// 	Route::get('rtl', ['as' => 'pages.rtl', 'uses' => 'PageController@rtl']);
-	// 	Route::get('tables', ['as' => 'pages.tables', 'uses' => 'PageController@tables']);
-	// 	Route::get('typography', ['as' => 'pages.typography', 'uses' => 'PageController@typography']);
-	// 	Route::get('upgrade', ['as' => 'pages.upgrade', 'uses' => 'PageController@upgrade']);
     });
 
-//=========================================================================================
+//================================================================================================================
 
 	Route::group(['middleware' =>['sess']], function () {
 
 		Route::resource('user', 'UserController');
 		Route::get('/pages/officer/information','UserController@index')->name('information_details');
-		
+
+//=============================================================================================================
+
 		Route::get('/pages/officer/profile','UserController@edit')->name('profile_edit');
-		Route::post('/pages/officer/profile','UserController@update')->name('profile_update');
+		Route::post('/pages/officer/profile','UserController@update');
+
+//==============================================================================================================
 
 		Route::get('/pages/officer/password','PassController@edit')->name('password_edit');
-		Route::post('/pages/officer/password','PassController@update')->name('password_update');
+		Route::post('/pages/officer/password','PassController@update');
 
-	// 	Route::resource('tran_edit', 'TransectionController');
-
-	// 	Route::get('profile', ['as' => 'profile.edit', 'uses' => 'ProfileController@edit']);
-	// 	Route::post('profile', ['as' => 'profile.update', 'uses' => 'ProfileController@update']);
-	// 	Route::post('profile/password', ['as' => 'profile.password', 'uses' => 'ProfileController@password']);
+		// 	Route::resource('tran_edit', 'TransectionController');
 	});
 

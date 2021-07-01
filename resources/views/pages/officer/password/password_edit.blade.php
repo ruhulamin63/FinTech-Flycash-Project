@@ -5,7 +5,7 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">
-                    <h5 class="title">{{ __('Password') }}</h5>
+                    <h5 class="title">{{ __('Change Password') }}</h5>
                 </div>
                 <form method="post" action="#" autocomplete="off">
                     <div class="card-body">
@@ -21,12 +21,12 @@
 
                         <div class="form-group{{ $errors->has('password') ? ' has-danger' : '' }}">
                             <label>{{ __('New Password') }}</label>
-                            <input type="password" name="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" placeholder="{{ __('New Password') }}" value="" required>
+                            <input type="password" name="new_password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" placeholder="{{ __('New Password') }}" value="" required>
                             @include('alerts.feedback', ['field' => 'password'])
                         </div>
                         <div class="form-group">
                             <label>{{ __('Confirm New Password') }}</label>
-                            <input type="password" name="password_confirmation" class="form-control" placeholder="{{ __('Confirm New Password') }}" value="" required>
+                            <input type="password" name="confirm_password" class="form-control" placeholder="{{ __('Confirm New Password') }}" value="" required>
                         </div>
                     </div>
                     <div class="card-footer">

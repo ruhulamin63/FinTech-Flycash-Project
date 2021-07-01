@@ -39,7 +39,7 @@
 
                             <div class="form-group">
                                 <label>{{ __('DOB') }}</label>
-                                <input type="date" name="dob" class="form-control" value="{{  __('05-Jul-1998') }}">
+                                <input type="text" name="dob" class="form-control" value="{{  __('05-Jul-1998') }}">
                                 @include('alerts.feedback', ['field' => 'nid'])
                             </div>
 

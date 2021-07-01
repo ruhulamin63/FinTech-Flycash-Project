@@ -39,12 +39,6 @@
                                 <p>{{ __('See Agent') }}</p>
                             </a>
                         </li>
-                        <li>
-                            <a href="#">
-                                <i class="tim-icons icon-bullet-list-67"></i>
-                                <p>{{ __('User Management') }}</p>
-                            </a>
-                        </li>
                     </ul>
                 </div>
             </li>
@@ -70,7 +64,7 @@
                                 <p>{{ __('Forward Message List') }}</p>
                             </a>
                             </li>
-                        <li>
+                        <li  @if ($pageSlug == 'changepass') class="active " @endif>
                             <a href="{{route('password_edit')}}">
                                 <i class="tim-icons icon-key-25"></i>
                                 <p>{{ __('Change Password') }}</p>
