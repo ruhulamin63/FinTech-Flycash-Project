@@ -70,7 +70,7 @@
                 <div class="collapse show" id="laravel-examples">
                     <ul class="nav pl-4">
                         <li >
-                            <a href="#">
+                            <a href="{{route('profile_edit')}}">
                                 <i class="tim-icons icon-simple-add"></i>
                                 <p>{{ __('My Profile') }}</p>
                             </a>
@@ -92,7 +92,7 @@
             </li>
 <!-- ================================================================================= -->
             <li >
-                <a href="#">
+                <a href="{{route('information_details')}}">
                     <i class="tim-icons icon-paper"></i>
                     <p>{{ __('Information') }}</p>
                 </a>

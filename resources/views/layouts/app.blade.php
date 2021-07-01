@@ -34,9 +34,9 @@
                     @include('layouts.footer')
                 </div>
             </div>
-            <form id="logout-form" method="POST" style="display: none;">
+            <!-- <form id="logout-form" method="POST" style="display: none;">
                 @csrf
-            </form>
+            </form> -->
         @else
             @include('layouts.navbars.navbar')
             <div class="wrapper wrapper-full-page">

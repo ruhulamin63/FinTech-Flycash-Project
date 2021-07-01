@@ -19,7 +19,7 @@ class RegisterController extends Controller
         $users = new User;
        
        $users->name = $req->email;
-       $users->email = $req->email;
+       $users->name = $req->name;
        $users->password = $req->password;
        $users->phone = $req->phone;
        $users->nid = $req->nid;

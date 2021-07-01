@@ -82,7 +82,8 @@
                         </li>
                         <li class="dropdown-divider"></li>
                         <li class="nav-link">
-                            <a href="/logout" class="nav-item dropdown-item" onclick="event.preventDefault();  document.getElementById('logout-form').submit();">{{ __('Log out') }}</a>
+                            <!-- change statement -->
+                            <a href="{{url('/logout')}}" class="nav-item dropdown-item">{{ __('Log out') }}</a>
                         </li>
                     </ul>
                 </li>

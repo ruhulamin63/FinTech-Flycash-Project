@@ -108,10 +108,10 @@
                             </div>
                             <select  type="text" name="type" class="form-control{{ $errors->has('type') ? ' is-invalid' : '' }}" placeholder="{{ __('Account Type') }}">
 
-                            <option value="{{ 'Account Type' }}" name= "admin" placeholder="{{ __('Account Type') }}">Admin</option>
-                            <option value="Admin" name= "admin" placeholder="{{ __('Account Type') }}">User</option>
-                            <option value="{{ 'Account Type' }}" name= "admin" placeholder="{{ __('Account Type') }}">Agent</option>
-                            <option value="Admin" name= "admin" placeholder="{{ __('Account Type') }}">Communication Officer</option>
+                            <option value="Admin" name= "admin" placeholder="{{ __('Account Type') }}">Admin</option>
+                            <option value="Admin" name= "user" placeholder="{{ __('Account Type') }}">User</option>
+                            <option value="Agent" name= "agent" placeholder="{{ __('Account Type') }}">Agent</option>
+                            <option value="communication" name= "communication" placeholder="{{ __('Account Type') }}">Communication Officer</option>
                             </select>
                             @include('alerts.feedback', ['field' => 'type'])
                         </div>
