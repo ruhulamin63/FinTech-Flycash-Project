@@ -72,6 +72,11 @@ use Illuminate\Support\Facades\Route;
 		Route::get('/pages/officer/password','PassController@edit')->name('password_edit');
 		Route::post('/pages/officer/password','PassController@update');
 
-		// 	Route::resource('tran_edit', 'TransectionController');
+//==============================================================================================================
+		// Invoice pdf generator using dompdf
+		Route::get('/pages/officer/pdf/invoice/{id}','PdfController@pdf')->name('pdf.invoice');
+
+//==============================================================================================================
+
 	});
 

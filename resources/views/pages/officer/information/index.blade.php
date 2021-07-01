@@ -33,15 +33,19 @@
                 <td>{{$user->nid}}</td>
                 <td>{{$user->dob}}</td>
                 <td>{{$user->type}}</td>
-
+                
                 <td>
-                  <a href="/informaiton/details/{{$user->id}}">
+                  <a href="/pages/officer/informaiton/details/{{$user->id}}">
                       <i class="tim-icons icon-pencil"></i>
                         Edit
                   </a> | 
-                  <a href="/informaiton/delete/{{$user->id}}">
+                  <a href="/pages/officer/informaiton/delete/{{$user->id}}">
                     <i class="tim-icons icon-trash-simple"></i>
-                      delete
+                      delete |
+                  </a>
+                  <a href="/pages/officer/pdf/invoice/{{$user->id}}">
+                      <i class="far fa-file-pdf"></i>
+                      pdf
                   </a>
                 </td>
               </tr>
