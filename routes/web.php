@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 	Route::get('/register', 'RegisterController@index');
-	Route::post('/register', 'RegisterController@insert');
+	Route::post('/register', 'RegisterController@insert')->name('register.insert');
 
 	Route::get('/login', 'LoginController@index');
 	Route::post('/login', 'LoginController@verify');	
@@ -59,13 +59,26 @@ use Illuminate\Support\Facades\Route;
 
 	Route::group(['middleware' =>['sess']], function () {
 
-		Route::resource('user', 'UserController');
-		Route::get('/pages/officer/information','UserController@index')->name('information_details');
+		//Route::resource('user', 'InfoController');
+
+		Route::get('/pages/officer/information','InfoController@index')->name('information_index');
+		Route::get('/pages/officer/information/details/{id}','InfoController@details')->name('information_details');
+
+		Route::get('/pages/officer/information/edit/{id}','InfoController@edit')->name('information_edit');
+		Route::post('/pages/officer/information/edit/{id}','InfoController@update')->name('information_update');
+		
+		Route::get('/pages/officer/information/delete/{id}','InfoController@delete');
+		Route::post('/pages/officer/information/delete/{id}','InfoController@destroy')->name('information_destroy');
 
 //=============================================================================================================
 
-		Route::get('/pages/officer/profile','UserController@edit')->name('profile_edit');
-		Route::post('/pages/officer/profile','UserController@update');
+		Route::get('/pages/officer/profile','InfoController@edit')->name('profile_edit');
+		Route::post('/pages/officer/profile','InfoController@update')->name('profile.update');
+
+//==============================================================================================================
+
+		// Route::post('/pages/officer/profile','UserController@store')->name('image_insert');
+		// Route::post('/pages/officer/profile','UserController@update');
 
 //==============================================================================================================
 
@@ -73,6 +86,7 @@ use Illuminate\Support\Facades\Route;
 		Route::post('/pages/officer/password','PassController@update');
 
 //==============================================================================================================
+
 		// Invoice pdf generator using dompdf
 		Route::get('/pages/officer/pdf/invoice/{id}','PdfController@pdf')->name('pdf.invoice');
 

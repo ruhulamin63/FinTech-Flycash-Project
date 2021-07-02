@@ -7,47 +7,56 @@
                 <div class="card-header">
                     <h4 class="title">{{ __('Profile') }}</h4>
                 </div>
-                <form method="post">
+                <form method="post" action="{{route('profile.update')}}" enctype="multipart/form-data">
                     <div class="card-body">
-                            @csrf
+                        @csrf
 
-                            @include('alerts.success')
-
-                            <div class="form-group{{ $errors->has('name') ? ' has-danger' : '' }}">
-                                <label>{{ __('Name') }}</label>
-                                <input type="text" name="name" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}"  value="{{ __('Ruhul Amin') }}">
-                                @include('alerts.feedback', ['field' => 'name'])
+                        @if (session()->has('update'))
+                            <div class="alert alert-success" role="alert">
+                                {{ session()->get('update') }}
                             </div>
+                        @endif
 
-                            <div class="form-group{{ $errors->has('email') ? ' has-danger' : '' }}">
-                                <label>{{ __('Email address') }}</label>
-                                <input type="email" name="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}"  value="{{ __('abc@gmail.com') }}">
-                                @include('alerts.feedback', ['field' => 'email'])
-                            </div>
+                        <div class="form-group{{ $errors->has('name') ? ' has-danger' : '' }}">
+                            <label>{{ __('Name') }}</label>
+                            <input type="text" name="name" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}"  value="{{ __('Ruhul Amin') }}">
+                            @include('alerts.feedback', ['field' => 'name'])
+                        </div>
 
-                            <div class="form-group">
-                                <label>{{ __('Phone Number') }}</label>
-                                <input type="text" name="phone" class="form-control" value="{{  __('+880 1743-369163') }}">
-                                @include('alerts.feedback', ['field' => 'phone'])
-                            </div>
+                        <div class="form-group{{ $errors->has('email') ? ' has-danger' : '' }}">
+                            <label>{{ __('Email address') }}</label>
+                            <input type="email" name="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}"  value="{{ __('abc@gmail.com') }}">
+                            @include('alerts.feedback', ['field' => 'email'])
+                        </div>
 
-                            <div class="form-group">
-                                <label>{{ __('NID') }}</label>
-                                <input type="text" name="nid" class="form-control" value="{{  __('53533535') }}">
-                                @include('alerts.feedback', ['field' => 'nid'])
-                            </div>
+                        <div class="form-group">
+                            <label>{{ __('Phone Number') }}</label>
+                            <input type="text" name="phone" class="form-control" value="{{  __('+880 1743-369163') }}">
+                            @include('alerts.feedback', ['field' => 'phone'])
+                        </div>
 
-                            <div class="form-group">
-                                <label>{{ __('DOB') }}</label>
-                                <input type="text" name="dob" class="form-control" value="{{  __('05-Jul-1998') }}">
-                                @include('alerts.feedback', ['field' => 'nid'])
-                            </div>
+                        <div class="form-group">
+                            <label>{{ __('NID') }}</label>
+                            <input type="text" name="nid" class="form-control" value="{{  __('53533535') }}">
+                            @include('alerts.feedback', ['field' => 'nid'])
+                        </div>
 
-                            <div class="form-group">
-                                <label>{{ __('Type') }}</label>
-                                <input type="text" name="type" class="form-control" value="{{  __('Communication') }}">
-                                @include('alerts.feedback', ['field' => 'nid'])
-                            </div>
+                        <div class="form-group">
+                            <label>{{ __('DOB') }}</label>
+                            <input type="text" name="dob" class="form-control" value="{{  __('05-Jul-1998') }}">
+                            @include('alerts.feedback', ['field' => 'nid'])
+                        </div>
+
+                        <div class="form-group">
+                            <label>{{ __('Type') }}</label>
+                            <input type="text" name="type" class="form-control" value="{{  __('Communication') }}">
+                            @include('alerts.feedback', ['field' => 'nid'])
+                        </div>
+
+                        <!-- <div class="form-group">
+                            <label></label>
+                            <input type="file" name="image" class="form-control" value="Upload">
+                        </div> -->
                     </div>
                     <div class="card-footer">
                         <button type="submit" class="btn btn-fill btn-primary">{{ __('Save') }}</button>
@@ -78,6 +87,7 @@
                         {{ __('Hello Everyone, Always Active' )}} <br> {{__('Never Give Up"...') }}
                     </div>
                 </div>
+
                 <div class="card-footer">
                     <div class="button-container">
                         <button class="btn btn-icon btn-round btn-facebook">

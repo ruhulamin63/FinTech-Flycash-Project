@@ -24,9 +24,10 @@ class RegisterController extends Controller
        $users->phone = $req->phone;
        $users->nid = $req->nid;
        $users->dob = $req->dob;
+       $users->image='null';
        $users->type = $req->type;
        $users->save();
 
-      // return redirect('/login');
+       return back()->with('register',"Register Successfully");
    }
 }

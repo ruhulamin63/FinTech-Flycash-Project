@@ -24,9 +24,9 @@
             </thead>
             <tbody>
 
-            @foreach($userlist as $user)
+            @foreach($userlist as $key => $user)
               <tr>
-                <td>{{$user->id}}</td>
+                <td>{{$key+1}}</td>
                 <td>{{$user->name}}</td>
                 <td>{{$user->email}}</td>
                 <td>{{$user->phone}}</td>
@@ -35,17 +35,17 @@
                 <td>{{$user->type}}</td>
                 
                 <td>
-                  <a href="/pages/officer/informaiton/details/{{$user->id}}">
+                  <a href="/pages/officer/information/details/{{$user->id}}">
+                    <i class="fas fa-info-circle"></i>
+                      Details
+                  </a>
+                  <a href="/pages/officer/information/edit/{{$user->id}}">
                       <i class="tim-icons icon-pencil"></i>
                         Edit
                   </a> | 
-                  <a href="/pages/officer/informaiton/delete/{{$user->id}}">
+                  <a href="/pages/officer/information/delete/{{$user->id}}">
                     <i class="tim-icons icon-trash-simple"></i>
-                      delete |
-                  </a>
-                  <a href="/pages/officer/pdf/invoice/{{$user->id}}">
-                      <i class="far fa-file-pdf"></i>
-                      pdf
+                      Delete |
                   </a>
                 </td>
               </tr>

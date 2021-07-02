@@ -22,7 +22,7 @@ class OfficersTableSeeder extends Seeder
             'phone' => '01743369163',
             'dob' => '05-02-1998',
             'type' => 'officer',
-
+            'image'=>nullable(),
             'password' => 'needhelp',
             'created_at' => now(),
             'updated_at' => now()

@@ -33,8 +33,14 @@
                 <img src="{{ asset('black') }}/img/flycash.png" alt="">
                     <h4 align= "center" class="card-title">{{ __('Registration') }}</h4>
                 </div>
-                <form class="form" method="post">
+                <form class="form" method="post" action="{{route('register.insert')}}">
                     @csrf
+                    
+                    @if (session()->has('register'))
+                        <div class="alert alert-success" role="alert">
+                            {{ session()->get('register') }}
+                        </div>
+                    @endif
 
                     <div class="card-body">
                         <div class="input-group{{ $errors->has('name') ? ' has-danger' : '' }}">

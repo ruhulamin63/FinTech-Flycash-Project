@@ -7,12 +7,10 @@
                 <div class="card-header">
                     <h3 class="title">{{ __('Agent Information') }}</h3>
                 </div>
-                <form method="post" autocomplete="off">
+                <!-- <form method="post" autocomplete="off">
                     <div class="card-body">
-                    @csrf
+                    -->
                            <!-- detete method -->
-
-                        @include('alerts.success')
                         
                         <div class="form-group">
                             <label><h4>{{ __('Name : ') }}</h4></label>
@@ -44,7 +42,7 @@
                             <label><h4>{{$user->type}}</h4></label>
                         </div>
                     </div>
-                </form>
+                <!-- </form> -->
             </div>
         </div>
     </div>

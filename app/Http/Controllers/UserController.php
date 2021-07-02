@@ -37,9 +37,19 @@ class UserController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $req)
     {
-        //
+        //$officers = new Officer;
+        
+        // if($req->hasFile('image')){
+        //     $file = $req->file('image');
+
+        //     echo "File Name : ".$file->getClientOriginalName()."<br>";
+        //     echo "File Extension : ".$file->getClientOriginalExtension()."<br>";
+        //     echo "File Mime Type : ".$file->getMimeType()."<br>";
+        //     echo "File Size : ".$file->getSize()."<br>";
+
+   // ============================ End Insert ====================================
     }
 
     /**
@@ -77,6 +87,10 @@ class UserController extends Controller
     {
         $users = Officer::find($user);
         
+        // $file = $req->file('image');
+        // $imageName=time().".".$file->extension();
+        // $file->move(public_path('upload'),$imageName);
+
         $users->name = $req->name;
         // if($users->password != $req->password){
         //     $users->password = $req->password;
@@ -86,9 +100,10 @@ class UserController extends Controller
         $users->nid = $req->nid;
         $users->dob = $req->dob;
         $users->type = $req->type;
+        // $users->image = $imageName;
         $users->save();
 
-        return redirect()->route('profile_update');
+        return back()->whit('update','Profile updated successfully');
     }
 
     /**

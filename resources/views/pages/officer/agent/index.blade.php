@@ -43,6 +43,10 @@
                       <i class="tim-icons icon-trash-simple"></i>
                         delete
                     </a>
+                    <a href="/pages/officer/pdf/invoice/{{$user->id}}">
+                      <i class="far fa-file-pdf"></i>
+                        Pdf
+                    </a>
                   </td>
                 </tr>
               @endforeach

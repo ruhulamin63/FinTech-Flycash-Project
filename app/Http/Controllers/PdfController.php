@@ -15,7 +15,7 @@ class PdfController extends Controller
         $user = Officer::find($id); // Model Query
 
         $pdf = PDF::loadView('pages.officer.pdf.invoice',compact('user'));
-        return $pdf->stream('info.pdf');
+        return $pdf->download('info.pdf');
 
         //return view('pages.officer.pdf.invoice')->with('user',$user);
     }

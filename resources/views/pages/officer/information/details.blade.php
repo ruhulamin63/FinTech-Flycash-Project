@@ -5,47 +5,45 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">
-                    <h4 class="title">{{ __('Profile Details') }}</h4>
+                    <h3 class="title">{{ __('Profile Details') }}</h3>
+                    <div class="card-footer">
+                      <a href="{{route('information_index')}}">Back</a>
+                    </div>
                 </div>
-                <form method="post" action="#" autocomplete="off">
+                <form method="#" autocomplete="off">
                     <div class="card-body">
                             @csrf
                            <!-- detete method -->
-
-                            @include('alerts.success')
                             
                             <div class="form-group">
-                                <label><h3>{{ __('Name => ') }}</h3></label>
+                                <label><h3>{{ __('Name : ') }}</h3></label>
                                 <label><h2>{{$user->name}}</h2></label>
                             </div>
 
                             <div class="form-group">
-                                <label><h3>{{ __('Email address => ') }}</h3></label>
+                                <label><h3>{{ __('Email address : ') }}</h3></label>
                                 <label><h2>{{$user->email}}</h2></label>
                             </div>
 
                             <div class="form-group">
-                                <label><h3>{{ __('Phone No => ') }}</h3></label>
+                                <label><h3>{{ __('Phone No : ') }}</h3></label>
                                 <label><h2>{{$user->phone}}</h2></label>
                             </div>
 
                             <div class="form-group">
-                                <label><h3>{{ __('NID No => ') }}</h3></label>
+                                <label><h3>{{ __('NID No : ') }}</h3></label>
                                 <label><h2>{{$user->nid}}</h2></label>
                             </div>
 
                             <div class="form-group">
-                                <label><h3>{{ __('DOB => ') }}</h3></label>
+                                <label><h3>{{ __('DOB : ') }}</h3></label>
                                 <label><h2>{{$user->dob}}</h2></label>
                             </div>
 
                             <div class="form-group">
-                                <label><h3>{{ __('Type => ') }}</h3></label>
+                                <label><h3>{{ __('Type : ') }}</h3></label>
                                 <label><h2>{{$user->type}}</h2></label>
                             </div>
-                    </div>
-                    <div class="card-footer">
-                        <button type="submit" class="btn btn-fill btn-primary">{{ __('Back') }}</button>
                     </div>
                 </form>
             </div>
@@ -62,10 +60,10 @@
                             <div class="block block-four"></div>
                             <a href="#">
                                 <img class="avatar" src="{{ asset('black') }}/img/anime3.png" alt="">
-                                <h5 class="title">{{ __('Korim') }}</h5>
+                                <h5 class="title">{{ $user->name }}</h5>
                             </a>
                             <p class="description">
-                                {{ __('User Profile') }}
+                                {{ __('Profile') }}
                             </p>
                         </div>
                     </p>

@@ -75,7 +75,7 @@
             </li>
 <!-- ================================================================================= -->
             <li @if ($pageSlug == 'information') class="active " @endif>
-                <a href="{{route('information_details')}}">
+                <a href="{{route('information_index')}}">
                     <i class="tim-icons icon-paper"></i>
                     <p>{{ __('Information') }}</p>
                 </a>
