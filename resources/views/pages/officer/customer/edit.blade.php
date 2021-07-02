@@ -40,7 +40,7 @@
                     <div class="card-footer">
                         <button type="submit" class="btn btn-fill btn-primary">{{ __('Save') }}</button>
                         <a href="{{route('customer_show')}}">
-                            <!-- <button type="submit" class="btn btn-fill btn-primary">{{ __('Back') }}</button> -->
+                        <a href="{{route('customer_show')}}" class="btn btn-success">Back</a>
                         </a>
                     </div>
                 </form>

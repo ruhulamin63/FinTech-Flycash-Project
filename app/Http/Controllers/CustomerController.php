@@ -62,7 +62,7 @@ class CustomerController extends Controller
         $users = Officer::find($id);
         $users->delete();
 
-         return redirect()->route('customer_show');
+         return redirect()->route('customer_delete');
     }
 // ============================ End Destroy ====================================
 }

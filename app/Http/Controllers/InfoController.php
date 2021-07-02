@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Officer; // I will change table name
 use Illuminate\Support\Facades\DB; //Import query builser 
+use Barryvdh\DomPDF\Facade as PDF;
 
 class InfoController extends Controller
 {
@@ -64,4 +65,13 @@ class InfoController extends Controller
          return back()->with('delete','Delete Successfully');
     }
 // ============================ End Destroy ====================================
+
+    public function pdf($id){
+
+        $user = Officer::find($id); // Model Query
+
+        $pdf = PDF::loadView('pages.officer.pdf.invoice',compact('user'));
+        return $pdf->stream('invoice.pdf');
+    }
+//===========================End pdf===========================================
 }

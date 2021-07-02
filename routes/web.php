@@ -45,7 +45,7 @@ use Illuminate\Support\Facades\Route;
 		Route::post('/pages/officer/customer/edit/{id}', 'CustomerController@update');
 
 		Route::get('/pages/officer/customer/delete/{id}', 'CustomerController@delete');
-		Route::get('/pages/officer/customer/delete/{id}', 'CustomerController@destroy')->name('customer_delete');
+		Route::post('/pages/officer/customer/delete/{id}', 'CustomerController@destroy')->name('customer_delete');
 		
 //**********************************************End Customer Routing************************************************
 		
@@ -68,27 +68,23 @@ use Illuminate\Support\Facades\Route;
 		Route::post('/pages/officer/information/edit/{id}','InfoController@update')->name('information_update');
 		
 		Route::get('/pages/officer/information/delete/{id}','InfoController@delete');
-		Route::post('/pages/officer/information/delete/{id}','InfoController@destroy')->name('information_destroy');
-
-//=============================================================================================================
-
-		Route::get('/pages/officer/profile','InfoController@edit')->name('profile_edit');
-		Route::post('/pages/officer/profile','InfoController@update')->name('profile.update');
-
-//==============================================================================================================
-
-		// Route::post('/pages/officer/profile','UserController@store')->name('image_insert');
-		// Route::post('/pages/officer/profile','UserController@update');
-
-//==============================================================================================================
-
-		Route::get('/pages/officer/password','PassController@edit')->name('password_edit');
-		Route::post('/pages/officer/password','PassController@update');
-
-//==============================================================================================================
+		Route::post('/pages/officer/information/delete/{id}','InfoController@destroy')->name('information_delete');
 
 		// Invoice pdf generator using dompdf
-		Route::get('/pages/officer/pdf/invoice/{id}','PdfController@pdf')->name('pdf.invoice');
+		Route::get('/pages/officer/pdf/invoice/{id}','InfoController@pdf')->name('pdf.invoice');
+
+//==============================================================================================================
+//=============================================================================================================
+		//Route::resource('/pages/officer/profile','OfficerController');
+
+		Route::get('/pages/officer/profile/edit','OfficerController@edit')->name('profile_edit');		
+		Route::post('/pages/officer/profile/edit','OfficerController@update')->name('profile_update');
+
+		Route::get('/pages/officer/password/password_edit','OfficerController@PassEdit')->name('pass_edit');
+		Route::post('/pages/officer/password/password_edit','OfficerController@PassUpdate')->name('pass_update');
+
+		// Route::post('/pages/officer/profile','OfficerController@store')->name('image_insert');
+		// Route::post('/pages/officer/profile','OfficerController@update');
 
 //==============================================================================================================
 

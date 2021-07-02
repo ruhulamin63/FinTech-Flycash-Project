@@ -62,7 +62,7 @@ class AgentController extends Controller
         $users = Officer::find($id);
         $users->delete();
 
-         return redirect()->route('agent_index');
+         return redirect()->route('agent_delete');
     }
 // ============================ End Destroy ====================================
 }

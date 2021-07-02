@@ -4,9 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Models\Officer;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB; //Import query builser 
+use Illuminate\Support\Facades\DB; //Import query builser
+use Validator;
+use App\Http\Requests\RegRequest;
 
-class UserController extends Controller
+class OfficerController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -69,9 +71,9 @@ class UserController extends Controller
      * @param  \App\Models\Officer  $user
      * @return \Illuminate\Http\Response
      */
-    public function edit(Officer $user)
+    public function edit(Officer $profile)
     {
-        $users= Officer::find($user);
+        $users= Officer::find($profile);
 
         return view('pages.officer.profile.edit')->with('user', $users);
     }
@@ -83,9 +85,9 @@ class UserController extends Controller
      * @param  \App\Models\Officer  $user
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $req, Officer $user)
+    public function update(Request $req, Officer $profile)
     {
-        $users = Officer::find($user);
+        $users = Officer::find($profile);
         
         // $file = $req->file('image');
         // $imageName=time().".".$file->extension();
@@ -112,8 +114,34 @@ class UserController extends Controller
      * @param  \App\Models\Officer  $user
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Officer $user)
+    public function destroy(Officer $profile)
     {
         //
+    }
+
+//*******************************************Password Change*********************************************
+
+    public function passEdit(Officer $profile)
+    {
+        $users= Officer::find($profile);
+
+        return view('pages.officer.password.password_edit')->with('user', $users);
+    }
+
+    public function PassUpdate(RegRequest $req, Officer $profile)
+    {
+        $users = Officer::find($profile);
+        
+        if($users->password != $req->new_password){
+            if($req->old_password != $req->new_password){
+                if($req->new_password == $req->confirm_password){
+                    $users->password = $req->new_password;
+                }
+            }
+        }
+
+        $users->save();
+
+        return back()->whit('update','Password updated successfully');
     }
 }

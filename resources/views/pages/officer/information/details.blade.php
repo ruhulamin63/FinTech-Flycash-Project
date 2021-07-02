@@ -1,55 +1,41 @@
-@extends('layouts.app', ['page' => __('Profile Details'), 'pageSlug' => 'details'])
+@extends('layouts.app', ['page' => __('Profile Details'), 'pageSlug' => 'information'])
 
 @section('content')
     <div class="row">
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">
-                    <h3 class="title">{{ __('Profile Details') }}</h3>
-                    <div class="card-footer">
-                      <a href="{{route('information_index')}}">Back</a>
-                    </div>
+                    <h4 class="title">{{ __('Information Data') }}</h4>
                 </div>
                 <form method="#" autocomplete="off">
                     <div class="card-body">
                             @csrf
                            <!-- detete method -->
-                            
-                            <div class="form-group">
-                                <label><h3>{{ __('Name : ') }}</h3></label>
-                                <label><h2>{{$user->name}}</h2></label>
-                            </div>
-
-                            <div class="form-group">
-                                <label><h3>{{ __('Email address : ') }}</h3></label>
-                                <label><h2>{{$user->email}}</h2></label>
-                            </div>
-
-                            <div class="form-group">
-                                <label><h3>{{ __('Phone No : ') }}</h3></label>
-                                <label><h2>{{$user->phone}}</h2></label>
-                            </div>
-
-                            <div class="form-group">
-                                <label><h3>{{ __('NID No : ') }}</h3></label>
-                                <label><h2>{{$user->nid}}</h2></label>
-                            </div>
-
-                            <div class="form-group">
-                                <label><h3>{{ __('DOB : ') }}</h3></label>
-                                <label><h2>{{$user->dob}}</h2></label>
-                            </div>
-
-                            <div class="form-group">
-                                <label><h3>{{ __('Type : ') }}</h3></label>
-                                <label><h2>{{$user->type}}</h2></label>
-                            </div>
+                    
+                        <table border="1">
+                            <tr>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                                <th>NID</th>
+                                <th>DOB</th>
+                            </tr>
+                            <tr>
+                                <td>{{$user->name}}</td>
+                                <td>{{$user->email}}</td>
+                                <td>{{$user->phone}}</td>
+                                <td>{{$user->nid}}</td>
+                                <td>{{$user->dob}}</td>
+                            </tr>
+                        </table>
                     </div>
+                    <a href="{{route('pdf.invoice', $user->id)}}" class="btn btn-success">Download Pdf</a>
+                    <a href="{{route('information_index')}}" class="btn btn-success">Back</a>
                 </form>
             </div>
 
         </div>
-        <div class="col-md-4">
+        <!-- <div class="col-md-4">
             <div class="card card-user">
                 <div class="card-body">
                     <p class="card-text">
@@ -85,6 +71,6 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
 @endsection

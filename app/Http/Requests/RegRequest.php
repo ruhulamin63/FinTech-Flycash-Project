@@ -28,8 +28,11 @@ class RegRequest extends FormRequest
             'email'=>'required|min:8|max:50',
             'phone'=>'required|min:11',
             'nid'=>'required|min:8',
-            'dob'=>'required|min:6',
-            'password'=>'required|min:8|max:20'
+            'dob'=>'required',
+            'password'=>'required|min:8|max:20',
+            'old_password'=>'required|min:8|max:20',
+            'new_password'=>'required|min:8|max:20',
+            'confirm_password'=>'required|min:8|max:20'
         ];
     }
 }

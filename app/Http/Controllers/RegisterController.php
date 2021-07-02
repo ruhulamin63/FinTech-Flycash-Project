@@ -14,7 +14,7 @@ class RegisterController extends Controller
         return view('register.register');
     }
 
-    public function insert(Request $req){
+    public function insert(RegRequest $req){
 
         $users = new Officer;
        

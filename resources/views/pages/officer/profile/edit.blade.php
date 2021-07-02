@@ -1,4 +1,4 @@
-@extends('layouts.app', ['page' => __('My Profile'), 'pageSlug' => 'profile'])
+@extends('layouts.app', ['page' => __('Officer Profile'), 'pageSlug' => 'profile'])
 
 @section('content')
     <div class="row">
@@ -7,7 +7,7 @@
                 <div class="card-header">
                     <h4 class="title">{{ __('Profile') }}</h4>
                 </div>
-                <form method="post" action="{{route('profile.update')}}" enctype="multipart/form-data">
+                <form method="post" action="#" enctype="multipart/form-data">
                     <div class="card-body">
                         @csrf
 

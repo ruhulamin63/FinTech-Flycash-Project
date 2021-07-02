@@ -7,45 +7,45 @@
                 <div class="card-header">
                     <h4 class="title">{{ __('Customer Profile') }}</h4>
                 </div>
-                <form method="post" action="#" autocomplete="off">
+                <form method="post"  autocomplete="off">
                     <div class="card-body">
                             @csrf
-                            @method('put')
 
                             @include('alerts.success')
                             
                             <div class="form-group">
                                 <label><h3>{{ __('Name => ') }}</h3></label>
-                                <label><h2>{{ __('Korim') }}</h2></label>
+                                <label><h2>{{ $user->name }}</h2></label>
                             </div>
 
                             <div class="form-group{{ $errors->has('email') ? ' has-danger' : '' }}">
                                 <label><h3>{{ __('Email address => ') }}</h3></label>
-                                <label><h2>{{ __('xyz@gmail.com') }}</h2></label>
+                                <label><h2>{{ $user->email }}</h2></label>
                             </div>
 
                             <div class="form-group">
                                 <label><h3>{{ __('Phone No => ') }}</h3></label>
-                                <label><h2>{{ __('+88 017***') }}</h2></label>
+                                <label><h2>{{ $user->phone }}</h2></label>
                             </div>
 
                             <div class="form-group">
                                 <label><h3>{{ __('NID No => ') }}</h3></label>
-                                <label><h2>{{ __('1998***') }}</h2></label>
+                                <label><h2>{{ $user->nid }}</h2></label>
                             </div>
 
                             <div class="form-group">
                                 <label><h3>{{ __('DOB => ') }}</h3></label>
-                                <label><h2>{{ __('05-Feb-1998') }}</h2></label>
+                                <label><h2>{{ $user->dob }}</h2></label>
                             </div>
 
                             <div class="form-group">
                                 <label><h3>{{ __('Type => ') }}</h3></label>
-                                <label><h2>{{ __('User') }}</h2></label>
+                                <label><h2>{{ $user->type }}</h2></label>
                             </div>
                     </div>
                     <div class="card-footer">
                         <button type="submit" class="btn btn-fill btn-primary">{{ __('Delete') }}</button>
+                        <a href="{{route('customer_show')}}" class="btn btn-success">Back</a>
                     </div>
                 </form>
             </div>

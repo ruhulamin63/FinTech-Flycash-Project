@@ -1,4 +1,4 @@
-@extends('layouts.app', ['page' => __('Information Data'), 'pageSlug' => 'infoedit'])
+@extends('layouts.app', ['page' => __('Information Data'), 'pageSlug' => 'information'])
 
 @section('content')
     <div class="row">
@@ -44,6 +44,7 @@
                     </div>
                     <div class="card-footer">
                         <button type="submit" class="btn btn-fill btn-primary">{{ __('Save') }}</button>
+                        <a href="{{route('information_index')}}" class="btn btn-success">Back</a>
                     </div>
                 </form>
             </div>

@@ -1,4 +1,4 @@
-@extends('layouts.app', ['page' => __('Profile Delete'), 'pageSlug' => 'delete'])
+@extends('layouts.app', ['page' => __('Profile Delete'), 'pageSlug' => 'information'])
 
 @section('content')
     <div class="row">
@@ -51,6 +51,7 @@
                     </div>
                     <div class="card-footer">
                         <button type="submit" class="btn btn-fill btn-primary">{{ __('Delete') }}</button>
+                        <a href="{{route('information_index')}}" class="btn btn-success">Back</a>
                     </div>
                 </form>
             </div>

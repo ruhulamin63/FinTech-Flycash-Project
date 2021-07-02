@@ -39,6 +39,7 @@
                     </div>
                     <div class="card-footer">
                         <button type="submit" class="btn btn-fill btn-primary">{{ __('Save') }}</button>
+                        <a href="{{route('agent_index')}}" class="btn btn-success">Back</a>
                     </div>
                 </form>
             </div>

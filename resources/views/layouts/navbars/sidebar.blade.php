@@ -9,7 +9,7 @@
             <a href="#" class="simple-text logo-normal">{{ __('FlyCash Dashboard') }}</a>
         </div>
         <ul class="nav">
-            <li>
+            <li @if ($pageSlug == 'dashboard') class="active " @endif>
                 <a href="{{ route('home') }}">
                     <i class="tim-icons icon-bank"></i>
                     <p>{{ __('Dashboard') }}</p>
@@ -65,7 +65,7 @@
                             </a>
                             </li>
                         <li  @if ($pageSlug == 'changepass') class="active " @endif>
-                            <a href="{{route('password_edit')}}">
+                            <a href="{{route('pass_edit')}}">
                                 <i class="tim-icons icon-key-25"></i>
                                 <p>{{ __('Change Password') }}</p>
                             </a>
