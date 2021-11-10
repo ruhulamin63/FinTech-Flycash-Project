@@ -218,79 +218,53 @@ function App() {
                 numberType="Select NGO's"
               />
             }
-          ></Route>
+          </Route>
 
           {/* ===========================================End Customer======================================= */}
 
         
 
-<<<<<<< HEAD
-<<<<<<< HEAD
           <PrivateRoute
             exact
             path="/officer-dashboard"
             component={OfficerDashboard}
-          />
-<<<<<<< HEAD
-=======
->>>>>>> customer
-=======
-=======
+
           {/* ===========================================Start Officer Route======================================= */}
 
-<<<<<<< HEAD
->>>>>>> customer
-=======
-
->>>>>>> customer
           <PrivateRoute path="/officer-dashboard" component={OfficerDashboard}/> 
 
           <PrivateRoute path="/show-customer" component={CustomerDetails}/> 
           <PrivateRoute path="/edit-customer/:id" component={CustomerEdit}/>
           <PrivateRoute path="/transaction-customer" component={CustomerTransaction}/>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> customer
-=======
           <PrivateRoute path="/customer-blocklist" component={CustomerBlockList}/>
->>>>>>> customer
+
 
 
           <PrivateRoute path="/show-agent" component={AgentDetails}/>
           <PrivateRoute path="/edit-agent/:id" component={AgentEdit}/>
-<<<<<<< HEAD
+
           <PrivateRoute path="/transaction-agent" component={AgentTransaction}/>
-<<<<<<< HEAD
-=======
+
           <PrivateRoute path="/transaction-agent" component={OfficerAgentTransaction}/>
 
->>>>>>> customer
+
 
           <PrivateRoute path="/view-profile" component={Profile}/>
-=======
+
           <PrivateRoute path="/agent-blocklist" component={AgentBlockList}/>
 
           <PrivateRoute path="/view-profile" component={OfficerProfile}/>
-<<<<<<< HEAD
->>>>>>> customer
-=======
 
->>>>>>> customer
           <PrivateRoute path="/edit-profile/:id" component={ProfileEdit}/>
 
           <PrivateRoute path="/change-password/:id" component={ChangePassword}/>
 
           <PrivateRoute path="/agent-invoice" component={AgentInvoice}/>
           <PrivateRoute path="/customer-invoice/" component={CustomerInvoice}/>
-<<<<<<< HEAD
->>>>>>> officer
-=======
+
 
 
 {/* ===========================================End Officer Route======================================= */}
->>>>>>> customer
 
 
           {/* ===========================================End Officer Route======================================= */}
