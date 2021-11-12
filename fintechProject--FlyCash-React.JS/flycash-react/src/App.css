@@ -20087,35 +20087,12 @@ select.form-control option {
 .details {
   display: none;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-.notify {
-  padding-top: 29px;
-  padding-right: 99px;
-}
-.popup th,
-h3,
-h4 {
-  color: black !important;
-}
-=======
->>>>>>> customer
 
-=======
->>>>>>> officer
 @media print {
   .sidebar {
     display: none;
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-  .hideb {
-=======
   .hideb{
->>>>>>> officer
-=======
-  .hideb{
->>>>>>> customer
     display: none;
   }
   .main-panel .content {
@@ -20144,30 +20121,14 @@ h4 {
   }
   .pdf th,
   h3,
-<<<<<<< HEAD
-<<<<<<< HEAD
-  h4 {
-=======
   h4,td {
->>>>>>> officer
-=======
-  h4,td {
->>>>>>> customer
     color: black !important;
   }
   .details {
     margin-left: 30px;
     display: block;
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-  .pdf table tr th {
-=======
   .pdf table tr th{
->>>>>>> officer
-=======
-  .pdf table tr th{
->>>>>>> customer
     border-collapse: collapse;
     border-style: solid black;
     border-bottom: 2px solid black;
@@ -20179,15 +20140,7 @@ h4 {
     padding: 0.5rem;
     text-align: center;
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-  .card-title {
-=======
   .card-title{
->>>>>>> officer
-=======
-  .card-title{
->>>>>>> customer
     text-align: center;
   }
 }

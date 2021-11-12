@@ -48,9 +48,9 @@ class ProfileEdit extends Component {
                         <td>{item.dob}</td>
                         <td>{item.type}</td>
 
-                        <td>
+                        {/* <td>
                             <Link to={`view-officer/${item.id}`} className="btn btn-success btn-sm">View</Link>
-                        </td>
+                        </td> */}
                         <td>
                             <Link to={`edit-profile/${item.id}`} className="btn btn-success btn-sm">Edit</Link>
                         </td>
@@ -84,7 +84,7 @@ class ProfileEdit extends Component {
                                             <th>NID</th>
                                             <th>DOB</th>
                                             <th>Type</th>
-                                            <th>View</th>
+                                            {/* <th>View</th> */}
                                             <th>Edit</th>
                                             <th>Change Password</th>
                                         </tr>

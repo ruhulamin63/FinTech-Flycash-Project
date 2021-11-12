@@ -97,11 +97,7 @@ class ProfileEdit extends Component {
 
                         <h4>Officer Change Password</h4>
                     </div>
-<<<<<<< HEAD
-
-=======
                     <Link to={'/view-profile'} className="btn btn-primary btn-sm float-end">Back</Link>
->>>>>>> customer
                         <div className="card-body">
 
                             <form onSubmit={this.updatePassword}>
@@ -117,19 +113,11 @@ class ProfileEdit extends Component {
                                     <lebel>Re Password</lebel>
                                     <input type="text" name="re_password" value={this.state.re_password} className="form-control"  onChange={this.handleInput}/>
                                 </div>
-<<<<<<< HEAD
-=======
                                 <button type="submit" id="updatebtn" className="btn btn-primary btn-sm float-end">Save</button>
->>>>>>> customer
                             </form>
                         </div>
                     </div>
                 </div>
-<<<<<<< HEAD
-                    <button type="submit" id="updatebtn" className="btn btn-primary btn-sm float-end">Save</button>
-                    <Link to={'/view-profile'} className="btn btn-primary btn-sm float-end">Back</Link>
-=======
->>>>>>> customer
                 </div>
             </div>
             </div>

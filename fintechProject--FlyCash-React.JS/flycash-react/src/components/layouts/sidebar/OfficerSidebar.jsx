@@ -41,42 +41,39 @@ const CustomersSidebar = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link to="#">
+                  <Link to="/customer-blocklist">
                     <i className="tim-icons icon-money-coins"></i>
-                    <p>Information</p>
+                    <p> Customer Block List</p>
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/agent-blocklist">
+                    <i className="tim-icons icon-money-coins"></i>
+                    <p> Agent Block List</p>
                   </Link>
                 </li>
               </ul>
             </div>
           </li>
 
-<<<<<<< HEAD
-          {/* <li>
-            <Link to="#">
-              <i className="tim-icons icon-single-02"></i>
-              <p>Profile</p>
-            </Link>
-          </li> */}
-=======
           <li>
             <Link to="/view-profile">
               <i className="tim-icons icon-single-02"></i>
               <p>Profile</p>
             </Link>
           </li>
->>>>>>> customer
           {/* <li>
             <Link to="#-">
               <i className="tim-icons icon-notes"></i>
               <p>Transaction List</p>
             </Link>
           </li> */}
-          <li>
+          {/* <li>
             <Link to="#">
               <i className="tim-icons icon-notes"></i>
               <p>Block List</p>
             </Link>
-          </li>
+          </li> */}
         </ul>
       </div>
     </div>

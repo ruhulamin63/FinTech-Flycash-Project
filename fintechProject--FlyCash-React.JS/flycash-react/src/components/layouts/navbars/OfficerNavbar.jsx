@@ -174,7 +174,7 @@ function CustomerNavbar(props) {
                   <div className="photo">
                     <img
                       alt="..."
-                      src={require("../../../black/img/anime3.png").default}
+                      src={require("../../../black/img/officer/hello.jpeg").default}
                     />
                   </div>
                   <b className="caret d-none d-lg-block d-xl-block" />

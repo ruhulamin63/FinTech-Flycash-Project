@@ -1,7 +1,8 @@
 import axios from "axios";
-import React, { useCallback, useState } from "react";
-import { useDropzone } from "react-dropzone";
+import React, { useState,useCallback,useEffect} from "react";
+import  Dropzone   from "react-dropzone";
 import { useHistory } from "react-router-dom";
+import {useDropzone} from 'react-dropzone';
 //import Image from "./Image"
 // reactstrap components
 import {
@@ -13,47 +14,93 @@ import {
   Col,
   FormGroup,
   Input,
-  Row
+  Row,
 } from "reactstrap";
 import { getUser, setUserSession } from "../auth/connect/getSession";
 import Navbar from "../layouts/navbars/CustomerNavbar";
-import Notification from "../layouts/notification/Notification";
 import SideNav from "../layouts/sidebar/customersSidebar";
+import Notification from "../layouts/notification/Notification";
+const thumbsContainer = {
+  display: 'flex',
+  flexDirection: 'row',
+  flexWrap: 'wrap',
+  marginTop: 16
+};
 
+const img = {
+  display: 'block',
+  width: 'auto',
+  height: '100%'
+};
+const thumb = {
+  display: 'inline-flex',
+  borderRadius: 2,
+  border: '1px solid #eaeaea',
+  marginBottom: 8,
+  marginRight: 8,
+  width: 100,
+  height: 100,
+  padding: 4,
+  boxSizing: 'border-box'
+};
+
+const thumbInner = {
+  display: 'flex',
+  minWidth: 0,
+  overflow: 'hidden'
+};
 
 const Profile = () => {
 
+  const onDrop = useCallback(acceptedFiles => {
+    // Do something with the files
+    //console.log(file.path);
+  }, [])
+const [files, setFiles] = useState([]);
+useEffect(() => () => {
+    // Make sure to revoke the data uris to avoid memory leaks
+    files.forEach(file => URL.revokeObjectURL(file.preview));
+  }, [files]);
+const {
+    acceptedFiles,
+    getRootProps,
+    getInputProps
+  } = useDropzone({
+    accept: 'image/jpeg, image/png',
+  });
 
-    const onDrop = useCallback(acceptedFiles => {
-      // Do something with the files
-      fileUploader(acceptedFiles);
-      //console.log(acceptedFiles);
-    }, []);
+  const acceptedFileItems = acceptedFiles.map(file => (
+    <li key={file.path}>
+      {file.path} - {file.size} bytes
+    </li>
+  ));
 
-    function fileUploader(files){
-      let formData = new FormData()
-      formData.append('uploadedFiles',files)
-      formData.append('email',user.email)
-      //console.log(formData);
-      axios.post('http://127.0.0.1:8000/api/customer/upload', {
-        data: formData,
-        email:user.email
+  const thumbs = files.map(file => (
+    <div style={thumb} key={file.name}>
+      <div style={thumbInner}>
+        <img
+          src={file.preview}
+          style={img}
+        />
+      </div>
+    </div>
+  ));
 
-        }).then(response => {
 
-          console.log(response);
-        }).catch(error => {
-         
-          setError("Invalid File");
-      });
-      
+   
 
-    }
-  const {getRootProps, getInputProps, isDragActive} = useDropzone({onDrop})
+
+
+
+
+
+
+
+
 
 
   const user = getUser();
-
+ 
   const history = useHistory();
   const [notify, setNotify] = useState({
     isOpen: false,
@@ -64,7 +111,7 @@ const Profile = () => {
     phone: "",
     name: "",
   });
-
+  
   const [msg, setMsg] = useState(" ");
   const [error, setError] = useState(" ");
   //const [error, seterror] = useState(" ");
@@ -236,22 +283,27 @@ const Profile = () => {
                       <img
                         alt="..."
                         className="avatar"
-                        src={require("../../black/img/anime6.png").default}
+                        src={files.preview}
                       />
                       <h5 className="title">{user.name}</h5>
                     </a>
                     <p className="description"> {user.type} Account </p>
-                  </div >
-                  <div {...getRootProps()} className="dp btn btn-danger btn-simple">
-                    <input {...getInputProps()} />
-                    {isDragActive ? (
-                      <p>Drop the files here ...</p>
-                    ) : (
-                      <p>
-                        Drag 'n' drop some files here, or click to select files
-                      </p>
-                    )}
                   </div>
+                  {Image.acceptedFileItems}
+                  <div>
+    <section className="dp btn btn-primary btn-simple">
+      <div {...getRootProps({ className: 'dropzone' })}>
+        <input {...getInputProps()} />
+        <p>Drag 'n' drop some files here, or click to select files</p>
+        <em>(Only *.jpeg and *.png images will be accepted)</em>
+      </div>
+      
+      
+    </section>
+  <aside  style={thumbsContainer}>
+  {acceptedFileItems}
+  </aside>
+  </div>
                   <div className="card-description">
                     Do not be scared of the truth because we need to restart the
                     human foundation in truth And I love you like Kanye loves

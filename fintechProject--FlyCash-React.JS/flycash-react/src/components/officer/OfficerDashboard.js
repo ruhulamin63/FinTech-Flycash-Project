@@ -4,7 +4,7 @@ import Navbar from "../layouts/navbars/OfficerNavbar";
 import cashinPNG from "../../black/img/icons/cashin.png";
 import sendPNG from "../../black/img/icons/sendmoney.png";
 import addpropic from "../../black/img/addpropic.png";
-import cashoutPNG from "../../black/img/icons/cashout.png";
+import cashoutPNG from "../../black/img/admin/remove.png";
 import statementPNG from "../../black/img/icons/statement.png";
 //import React, { Component } from 'react'
 import { Link, useHistory } from "react-router-dom";
@@ -40,8 +40,8 @@ function OfficerDashboard() {
                             <div className="col-sm-6 text-left">
                             <h2 className="card-title">DASHBOARD</h2>
                             <h4 className="card-title">Welcome to communication officer</h4>
-                            <h5>{user.email}</h5>
-                            <input type="button" value="Logout" onClick={handleLogout}/>
+                            {/* <h5>{user.email}</h5> */}
+                            {/* <input type="button" value="Logout" onClick={handleLogout}/> */}
                             </div>
                         </div>
                         </div>

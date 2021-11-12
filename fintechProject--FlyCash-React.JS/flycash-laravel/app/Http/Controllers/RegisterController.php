@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+//use Validator;
+
 use Illuminate\Support\Facades\Validator;
 use App\Http\Requests\RegisterRequest;
 use App\Models\Loginuser;
@@ -30,17 +32,17 @@ class RegisterController extends Controller
         
         $validator = Validator::make($req->all(), [
             'name' => 'required|min:3|max:30',
-            'email' => 'email:rfc,dns|required|min:10|max:50|',
-            'password'=> 'required|min:8|max:20',
-            'password_confirmation'=> 'required|min:8|max:20',
-            //  'name' => 'required',
-            // 'email' => 'required',
-            // 'password'=> 'required',
-            // 'password_confirmation'=> 'required',
-            'phone' => 'required|min:11|numeric',
-            'nid' => 'required|min:10|numeric',
-            'dob' => 'required',
-            'type' => 'required',
+            // 'email' => 'email:rfc,dns|required|min:10|max:50|',
+            // 'password'=> 'required|min:8|max:20',
+            // 'password_confirmation'=> 'required|min:8|max:20',
+            // //  'name' => 'required',
+            // // 'email' => 'required',
+            // // 'password'=> 'required',
+            // // 'password_confirmation'=> 'required',
+            // 'phone' => 'required|min:11|numeric',
+            // 'nid' => 'required|min:10|numeric',
+            // 'dob' => 'required',
+            // 'type' => 'required',
         ]);
 
             if ($validator->fails()) {
@@ -222,49 +224,4 @@ class RegisterController extends Controller
     }
         
         
-<<<<<<< HEAD
-<<<<<<< HEAD
-                        $agent->balance = 10;
-                        $agent->name = $req->name;
-                        $agent->email = $req->email;
-                        $agent->password = $req->password;
-                        $agent->transaction_status = "unblocked";
-                        $agent->phone = $req->phone;
-                        $agent->nid = $req->nid;
-                        $agent->dob = $req->dob;
-                        $agent->type = $req->type;
-                        //$user->user_type = "active";
-                        $agent->save();
-            
-                        
-                        return redirect('/login');
-
-
-
-
-                    }else{
-                        $req->session()->flash('msg', 'Invalid User Type');
-                        return redirect('/register');
-
-                    }
-
-
-                
-
-            }
-            
-            }else{
-                
-                $req->session()->flash('msg', 'Password and Confirm Passowrd Does Not match!');
-                return redirect('/register');
-                //return view('login.index');
-            }
-            
-        }
 }
-=======
-}
->>>>>>> customer
-=======
-}
->>>>>>> customer

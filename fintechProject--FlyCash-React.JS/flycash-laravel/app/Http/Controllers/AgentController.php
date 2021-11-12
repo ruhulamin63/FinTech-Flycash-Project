@@ -49,15 +49,9 @@ class AgentController extends Controller
         $agent->nid = $req->input('nid');
         $agent->dob = $req->input('dob');
         $agent->type = $req->input('type');
-<<<<<<< HEAD
 
         $agent->update();
 
-=======
-
-        $agent->update();
-
->>>>>>> customer
         return response()->json([
             'status' => 200,
             'message' => 'Agent Update Successfully',
@@ -69,7 +63,6 @@ class AgentController extends Controller
     public function view()
     {
         $agent= Agentstransactions::all(); //change Officer to (Customer)->tablename
-<<<<<<< HEAD
 
         //$users = Officer::orderBy('id','DESC')->get(); //change Officer to (Agent)->tablename
 
@@ -77,7 +70,6 @@ class AgentController extends Controller
             'status' => 200,
             'agents' => $agent
         ]);
-=======
 
         //$users = Officer::orderBy('id','DESC')->get(); //change Officer to (Agent)->tablename
 
@@ -137,7 +129,6 @@ class AgentController extends Controller
                 'message' => 'Not updated',
             ]);
         }
->>>>>>> customer
     }
     
 //=======================End Officer Part========================

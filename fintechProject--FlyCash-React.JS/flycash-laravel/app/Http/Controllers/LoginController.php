@@ -99,20 +99,18 @@ class LoginController extends Controller
                 ]);
                 
                
-            }elseif ($type == "officer")
+            }else if ($type == "officer")
             {   
                 $officer = Officer::where('email',$req->email)
                 ->first();
                 return response()->json([
-                    'status' => 400,
+                    'status' => 200,
                     'user_status'=>$officer,
                     'message' => 'Login Successfully',
                 ]);
                
 
             }
-
-  
             
         }else{
             
@@ -120,10 +118,5 @@ class LoginController extends Controller
                 'not_found' => 'Data Not Found',
             ]);
         }
-
-            
-
-        
-        
      }
 }

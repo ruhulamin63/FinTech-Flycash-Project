@@ -8,6 +8,7 @@ use App\Models\Agentstransaction;
 use App\Models\Agent;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Validator;
 
 class AgentTransactionController extends Controller
 {
@@ -42,7 +43,7 @@ class AgentTransactionController extends Controller
 
         if ($validator->fails()) {
             return response()->json([
-                'error'=> $validator->messages()
+                'error'=> $validator->errors()
             ]);
         } else {
 

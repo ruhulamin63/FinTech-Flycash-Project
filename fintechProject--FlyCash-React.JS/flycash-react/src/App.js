@@ -18,25 +18,28 @@ import Addmoney from "./components/customer/transactions/addMoney";
 import Donate from "./components/customer/transactions/Donate";
 import TransactionList from "./components/customer/transactions/transactionlist";
 import ErrorPage from "./components/Error404";
+
+//=======================Start Officer Import File==============================
+
 import AgentDetails from './components/officer/agent/AgentDetails';
 import AgentEdit from './components/officer/agent/AgentEdit';
 import AgentInvoice from './components/officer/agent/AgentInvoice';
-<<<<<<< HEAD
-import AgentTransaction from './components/officer/agent/AgentTransaction';
-=======
 import OfficerAgentTransaction from './components/officer/agent/AgentTransaction';
->>>>>>> customer
 import CustomerDetails from './components/officer/customer/CustomerDetails';
 import CustomerEdit from './components/officer/customer/CustomerEdit';
 import CustomerInvoice from './components/officer/customer/CustomerInvoice';
 import CustomerTransaction from './components/officer/customer/CustomerTransaction';
-//=======================Start Officer Import File==============================
+
 import OfficerDashboard from './components/officer/OfficerDashboard';
 import ChangePassword from './components/officer/profile/ChangePassword';
 import ProfileEdit from './components/officer/profile/ProfileEdit';
+// import Profile from './components/officer/profile/Profile';
+
 import Welcome from "./components/welcome";
+
 import PrivateRoute from './PrivateRoute';
-import PublicRoute from './PublicRouteOfficer';
+import PublicRouteOfficer from './PublicRouteOfficer';
+//import PublicRoute from './PublicRoute';
 
 import CustomerBlockList from './components/officer/customer/CustomerBlockList';
 
@@ -45,13 +48,6 @@ import AgentBlockList from './components/officer/agent/AgentBlockList';
 import OfficerProfile from './components/officer/profile/Profile';
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> officer
-=======
->>>>>>> customer
-=======
->>>>>>> customer
 
 //=======================Admin================================
 
@@ -123,9 +119,9 @@ function App() {
             <TransactionList />
           </Route>
 
-          <Route exact path="/" component={Welcome}/>
+          {/* <Route exact path="/" component={Welcome}/>
           <PublicRoute exact path="/register" component={Register}/>
-          <PublicRoute exact path="/login" component={Login}/>
+          <PublicRoute exact path="/login" component={Login}/> */}
 
           <PrivateRoute path="/customer-dashboard" component={Dashboard}/>
 
@@ -218,38 +214,33 @@ function App() {
                 numberType="Select NGO's"
               />
             }
-          </Route>
+          ></Route>
 
           {/* ===========================================End Customer======================================= */}
 
-        
-
-          <PrivateRoute
-            exact
-            path="/officer-dashboard"
-            component={OfficerDashboard}
+          {/* ===========================================Start Officer Route======================================= */}
 
           {/* ===========================================Start Officer Route======================================= */}
+
+          <Route exact path="/" component={Welcome}/>
+          <PublicRouteOfficer exact path="/register" component={Register}/>
+          <PublicRouteOfficer exact path="/login" component={Login}/>
 
           <PrivateRoute path="/officer-dashboard" component={OfficerDashboard}/> 
 
           <PrivateRoute path="/show-customer" component={CustomerDetails}/> 
           <PrivateRoute path="/edit-customer/:id" component={CustomerEdit}/>
           <PrivateRoute path="/transaction-customer" component={CustomerTransaction}/>
-          <PrivateRoute path="/customer-blocklist" component={CustomerBlockList}/>
 
+          <PrivateRoute path="/customer-blocklist" component={CustomerBlockList}/>
 
 
           <PrivateRoute path="/show-agent" component={AgentDetails}/>
           <PrivateRoute path="/edit-agent/:id" component={AgentEdit}/>
-
-          <PrivateRoute path="/transaction-agent" component={AgentTransaction}/>
-
           <PrivateRoute path="/transaction-agent" component={OfficerAgentTransaction}/>
 
-
-
-          <PrivateRoute path="/view-profile" component={Profile}/>
+{/* 
+          <PrivateRoute path="/view-profile" component={Profile}/> */}
 
           <PrivateRoute path="/agent-blocklist" component={AgentBlockList}/>
 
@@ -263,11 +254,8 @@ function App() {
           <PrivateRoute path="/customer-invoice/" component={CustomerInvoice}/>
 
 
-
 {/* ===========================================End Officer Route======================================= */}
 
-
-          {/* ===========================================End Officer Route======================================= */}
           {/*+++++++++++++++++++++++++++++++++++++++++++++++++++ Admin +++++++++++++++++++++++++++++++++++*/}
 
           <Route exact path="/admin-dashboard">

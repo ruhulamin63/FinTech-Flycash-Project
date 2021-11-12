@@ -16,7 +16,6 @@ const Login  =() => {
     const [password,setPassword] = useState('');
 
     const [error,setError] = useState(null);
-    
     const [loging,setLoging] = useState(false);
 
     const handleLogin = () => {
@@ -31,34 +30,27 @@ const Login  =() => {
         }).then(response => {
             setLoging(false);
              var data =response.data.user_status;
+             console.log(data);
             
             //console.log('response-->>',response);
 
             if(data.type=="customer"){
              
-<<<<<<< HEAD
-<<<<<<< HEAD
-                setUserSession(data.email,data);
-=======
                  setUserSession(data.email,data);
->>>>>>> officer
-=======
-                 setUserSession(data.email,data);
->>>>>>> customer
                 history.push('/customer-dashboard');
             }
-            // else if(response.data.agents.type=="#"){
-            //     setUserSession(response.data.token, response.data.user);
-            //     history.push('#');
+            // else if(response.data.agents.type=="admin"){
+            //     setUserSession(data.email,data);
+            //     history.push('/admin-dashboard');
             // }
-            else if(data.type=="admin"){
-                setUserSession(data.email,data);
-                history.push('/customer-dashboard');
-            }
+            // else if(response.data.admins.type=="agent"){
+            //     setUserSession(data.email,data);
+            //     history.push('/agent-dashboard');
+            // }
             else if(data.type=="officer"){
                 setUserSession(data.email,data);
                 history.push('/officer-dashboard');
-            }
+            }       
         }).catch(error => {
             setLoging(false);
             //console.error('error-->>>',error);

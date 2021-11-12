@@ -31,31 +31,6 @@ const CustomerTransaction = () => {
         mount();
         
      }, []);
-<<<<<<< HEAD
-
-    
-//======================================================================
-
-    //render(){
-        return (
-            <div>
-            <div className="wrapper">
-            <SideNav />
-            <div className="main-panel ps" >
-                <Navbar />
-            <div className= "content">
-                <div class="row" style={{ right: "500px" }}>
-                <div class="col-md-12">
-                    <div class="card ">
-                        <div class="card-header">
-                            <h4>Customer All Transaction Page</h4>
-                            <input type="text"
-                                    placeholder="searching"
-                                    onChange={e => {setSearch(e.target.value)}}
-                                />
-                        </div>
-
-=======
 
     
 //======================================================================
@@ -79,7 +54,6 @@ const CustomerTransaction = () => {
                                 />
                         </div>
                         <Link to={'/show-customer'} className="btn btn-primary btn-sm float-end">Back</Link>
->>>>>>> customer
                         <div class="card-body">
                             
                             <h2>Transaction Data</h2>
@@ -94,7 +68,6 @@ const CustomerTransaction = () => {
                                             <th>Balance</th>
                                             <th>Date</th>
                                             <th>Print</th>
-                                            <th>Status</th>
                                         </tr>
                                     </thead>
             
@@ -132,11 +105,7 @@ const CustomerTransaction = () => {
                         </div>
                     </div>
                 </div>
-<<<<<<< HEAD
-                    <Link to={'/show-customer'} className="btn btn-primary btn-sm float-end">Back</Link>
-=======
                 <Link to={'/customer-blocklist'} className="btn btn-primary btn-sm float-end">Block List</Link>
->>>>>>> customer
                 </div>
             </div>
             </div>

@@ -9,6 +9,7 @@ import swal from 'sweetalert';
 class AgentEdit extends Component {
 
     state = {
+        name:'',
         phone:'',
         nid:'',
         dob:'',
@@ -31,6 +32,7 @@ class AgentEdit extends Component {
 
             //console.log(agent_id);
             this.setState({
+                name: res.data.agents.name,
                 phone: res.data.agents.phone,
                 nid: res.data.agents.nid,
                 dob: res.data.agents.dob,
@@ -97,6 +99,10 @@ class AgentEdit extends Component {
                            
                         <form onSubmit={this.updateAgent}>
 
+                            <div className="form-group mb-3">
+                                <lebel>Name</lebel>
+                                <input type="text" name="name" value={this.state.name} className="form-control"  onChange={this.handleInput}/>
+                            </div>
                             <div className="form-group mb-3">
                                 <lebel>Phone</lebel>
                                 <input type="text" name="phone" value={this.state.phone} className="form-control"  onChange={this.handleInput}/>

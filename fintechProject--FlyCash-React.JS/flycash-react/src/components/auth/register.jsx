@@ -1,9 +1,5 @@
 import axios from 'axios';
-<<<<<<< HEAD
 import React, { useState } from "react";
-=======
-import React, { useEffect, useState } from "react";
->>>>>>> officer
 import { useHistory } from "react-router-dom";
 import logo from "../../black/img/flycash.png";
 import Footer from "../layouts/footer";
@@ -12,7 +8,6 @@ import Popup from '../layouts/notification/Popup';
 
 const Register = () => {
 
-<<<<<<< HEAD
   const [confirmDialog,setConfirmDialog]=useState({isOpen:false,title:'',subTitle:''})
   const history = useHistory();
   const [msg, setMsg] = useState(" ");
@@ -37,7 +32,6 @@ const handleInputChange = (e) => {
   
 }
   const register = async (e) => {
-    
     e.preventDefault();
     const name =data.name.toString();
     const email =data.email.toString();
@@ -91,22 +85,6 @@ const handleInputChange = (e) => {
       setMsg(res.data.message);
       console.log("hi");
       setData({ 
-=======
-      function ScrollToTopOnMount() {
-        useEffect(() => {
-          window.scrollTo(0,0);
-        }, []);
-      
-        return null;
-      }
-
-      window.scrollTo(0, 0)
-      const history = useHistory();
-      const [msg, setMsg] = useState(" ");
-      const [error, setError] = useState(" ");
-      const [data, setData] = useState({
-            
->>>>>>> officer
         name: '',
         email: '',
         password:'',
@@ -115,7 +93,6 @@ const handleInputChange = (e) => {
         nid:'',
         dob:'',
         type:'', 
-<<<<<<< HEAD
       })
   }
     else {
@@ -131,87 +108,6 @@ const handleInputChange = (e) => {
     <div className="perfect-scrollbar-on">
       <GuestNav />
       <div className="wrapper wrapper-full-page ">
-=======
-        //error:[]
-    });
-    const handleInputChange = (e) => {
-      const name = e.target.name;
-      const value = e.target.value;
-      setData({  ...data,[name]: [value]})
-      console.log(name, value);
-      
-    }
-      const register = async (e) => {
-        e.preventDefault();
-        const name =data.name.toString();
-        const email =data.email.toString();
-        const password=data.password.toString();
-        const password_confirmation =data.password_confirmation.toString();
-        const phone =data.phone.toString();
-        const nid =data.nid.toString();
-        const dob =data.dob.toString();
-        const type =data.type.toString();
-        const res = await axios.post('http://localhost:8000/api/users-register', { name: name,email:email,password: password,dob:dob,password_confirmation:password_confirmation,phone:phone,nid:nid,type:type});
-        if (res.data.status === 200) {
-            console.log(res.data.message);
-            setMsg(res.data.message);
-            setData({ 
-              name: '',
-              email: '',
-              password:'',
-              password_confirmation:'',
-              phone:'', 
-              nid:'',
-              dob:'',
-              type:'', 
-            })
-          
-            setTimeout(() => { history.push('/login'); }, 2000);
-            
-        }
-        else if (res.data.status === 240) {
-            setMsg(res.data.message);
-            console.log(res.data.data)
-            setData({
-            name: '',
-            email: '',
-            password:'',
-            password_confirmation:'',
-            phone:'', 
-            nid:'',
-            dob:'',
-            type:'',  
-          })
-          
-        }
-        else if (res.data.status === 422) {
-          setMsg(res.data.message);
-          console.log("hi");
-          setData({ 
-            name: '',
-            email: '',
-            password:'',
-            password_confirmation:'',
-            phone:'', 
-            nid:'',
-            dob:'',
-            type:'', 
-          })
-      }
-        else {
-          setError(res.data.error);
-          console.log(error);
-          console.log(res.data.message);
-        }
-        e.stopPropagation();
-
-    }
-  return (
-    <>
-    <ScrollToTopOnMount />
-      <GuestNav />
-      <div className="wrapper ">
->>>>>>> officer
         <div className="full-page register-page">
           <div className="content">
             <div className=" container">
@@ -227,8 +123,7 @@ const handleInputChange = (e) => {
                     </div>
                     <form onSubmit={register} class="form" method="post">
                       <div class="card-body">
-                        
-                        <div class="input-group mb-5">
+                        <div class="input-group">
                           <div class="input-group-prepend">
                             <div class="input-group-text">
                               <i class="tim-icons icon-single-02"></i>
@@ -244,10 +139,6 @@ const handleInputChange = (e) => {
                           
                         </div>
                         <span className="text-danger">{error.name}</span>
-<<<<<<< HEAD
-=======
-
->>>>>>> officer
                         <div class="input-group">
                           <div class="input-group-prepend">
                             <div class="input-group-text">
@@ -408,20 +299,13 @@ const handleInputChange = (e) => {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
     </div>
     <Popup 
     confirmDialog={confirmDialog}
     setConfirmDialog={setConfirmDialog}
     />
-=======
->>>>>>> officer
     </>
   );
 };
 
-<<<<<<< HEAD
 export default Register;
-=======
-export default Register;
->>>>>>> officer
